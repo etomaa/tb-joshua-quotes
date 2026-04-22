@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TB Joshua – Quotable Quotes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy:#0C1A3B; --navy2:#142254; --gold:#C9973A; --gold2:#E8B85A;
+  --cream:#FAF6EE; --text:#1C1C1C; --muted:#6B7080; --border:#E2D9C8;
+  --hl:#FFF3CD;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Outfit',sans-serif;background:var(--cream);color:var(--text);min-height:100vh}
+header{background:var(--navy);position:sticky;top:0;z-index:100;box-shadow:0 2px 20px rgba(0,0,0,.35)}
+.hi{max-width:960px;margin:0 auto;padding:18px 24px 14px;display:flex;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.brand h1{font-family:'Cormorant Garamond',serif;font-size:1.75rem;font-weight:700;color:var(--gold2);letter-spacing:.02em;line-height:1}
+.brand p{font-size:.72rem;color:rgba(255,255,255,.45);letter-spacing:.1em;text-transform:uppercase;margin-top:3px}
+.sw{flex:1 1 260px;position:relative}
+.sw input{width:100%;padding:9px 16px 9px 40px;border-radius:8px;border:1.5px solid rgba(255,255,255,.15);background:rgba(255,255,255,.08);color:#fff;font-family:'Outfit',sans-serif;font-size:.92rem;outline:none;transition:border-color .2s,background .2s}
+.sw input::placeholder{color:rgba(255,255,255,.35)}
+.sw input:focus{border-color:var(--gold);background:rgba(255,255,255,.13)}
+.sw svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);opacity:.4;pointer-events:none}
+.mb{max-width:960px;margin:0 auto;padding:8px 24px;display:flex;align-items:center;gap:14px;border-top:1px solid rgba(255,255,255,.08);flex-wrap:wrap}
+.mb span{font-size:.75rem;color:rgba(255,255,255,.4);letter-spacing:.04em}
+.mb strong{color:var(--gold)}
+.gw{display:flex;align-items:center;gap:6px;margin-left:auto}
+.gw label{font-size:.75rem;color:rgba(255,255,255,.4);white-space:nowrap}
+.gw input{width:64px;padding:4px 8px;border-radius:5px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:#fff;font-size:.8rem;font-family:'Outfit',sans-serif;text-align:center}
+.gw input:focus{outline:none;border-color:var(--gold)}
+.gbtn{padding:4px 10px;background:var(--gold);color:var(--navy);border:none;border-radius:5px;font-size:.75rem;font-weight:600;cursor:pointer;font-family:'Outfit',sans-serif;transition:background .15s}
+.gbtn:hover{background:var(--gold2)}
+main{max-width:960px;margin:0 auto;padding:28px 24px 60px}
+#rb{font-size:.8rem;color:var(--muted);margin-bottom:18px;min-height:20px}
+#ql{display:flex;flex-direction:column;gap:0}
+.qi{display:flex;gap:0;border-bottom:1px solid var(--border);padding:16px 0;transition:background .15s;position:relative;scroll-margin-top:120px}
+.qi:hover{background:rgba(201,151,58,.04)}
+.qi:first-child{border-top:1px solid var(--border)}
+.qn{flex:0 0 52px;font-size:.72rem;font-weight:600;color:var(--gold);letter-spacing:.05em;padding-top:3px;user-select:none}
+.qt{flex:1;font-family:'Cormorant Garamond',serif;font-size:1.12rem;line-height:1.7;color:var(--text)}
+.qt mark{background:var(--hl);color:inherit;border-radius:2px;padding:0 1px}
+.qa{flex:0 0 auto;display:flex;align-items:flex-start;gap:6px;padding-top:2px;opacity:0;transition:opacity .15s}
+.qi:hover .qa{opacity:1}
+.qa button{background:none;border:1px solid var(--border);border-radius:5px;padding:4px 8px;font-size:.7rem;color:var(--muted);cursor:pointer;font-family:'Outfit',sans-serif;transition:border-color .15s,color .15s;white-space:nowrap}
+.qa button:hover{border-color:var(--gold);color:var(--navy)}
+.qa button.ok{border-color:#22c55e;color:#16a34a}
+#nr{display:none;text-align:center;padding:80px 20px;color:var(--muted)}
+#nr svg{margin-bottom:16px;opacity:.3}
+#nr p{font-size:1rem}
+#nr small{font-size:.8rem}
+.qi.flash{animation:fl 1.8s ease-out}
+@keyframes fl{0%{background:rgba(201,151,58,.22)}100%{background:transparent}}
+#toast{position:fixed;bottom:28px;right:28px;background:var(--navy);color:#fff;font-size:.82rem;padding:10px 18px;border-radius:8px;border-left:3px solid var(--gold);opacity:0;transform:translateY(10px);transition:opacity .25s,transform .25s;pointer-events:none;z-index:9999}
+#toast.show{opacity:1;transform:translateY(0)}
+footer{background:var(--navy);color:rgba(255,255,255,.35);text-align:center;padding:20px;font-size:.75rem;letter-spacing:.04em}
+footer strong{color:var(--gold)}
+@media(max-width:600px){
+  .hi{padding:14px 16px 10px;gap:12px}
+  .brand h1{font-size:1.3rem}
+  main{padding:20px 16px 50px}
+  .qt{font-size:1rem}
+  .qn{flex:0 0 40px;font-size:.68rem}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="hi">
+    <div class="brand">
+      <h1>TB Joshua</h1>
+      <p>Quotable Quotes &middot; Volumes 1 &amp; 2</p>
+    </div>
+    <div class="sw">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" id="si" placeholder="Search quotes, keywords, themes&#8230;" autocomplete="off" spellcheck="false">
+    </div>
+  </div>
+  <div class="mb">
+    <span><strong id="vc">547</strong> quotes</span>
+    <span>&middot;</span>
+    <span>TB Joshua &middot; SCOAN</span>
+    <div class="gw">
+      <label for="gi">Go to #</label>
+      <input type="number" id="gi" placeholder="1&#8211;547" min="1" max="547">
+      <button class="gbtn" onclick="goTo()">Go</button>
+    </div>
+  </div>
+</header>
+<main>
+  <div id="rb"></div>
+  <div id="ql"></div>
+  <div id="nr">
+    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    <p>No quotes found</p><small>Try different keywords</small>
+  </div>
+</main>
+<div id="toast"></div>
+<footer><strong>TB Joshua</strong> &middot; Quotable Quotes &middot; Volumes 1 &amp; 2 &middot; 547 Quotes</footer>
+<script>
+const Q=[
+  {id:1,text:"Jesus Christ has given us a mind and the ability to choose between right and wrong."},
+  {id:2,text:"God's power cannot work in your heart unless your will is obedient to God's will."},
+  {id:3,text:"When Jesus becomes your Coach, you will be asked to see what is not yet seen, to do what is not yet done, to say what is not yet said."},
+  {id:4,text:"In order not to end up like the masses out there who are merely wandering and unsure of their goal and dreams, your objective must be clear."},
+  {id:5,text:"If you follow the direction of your calling, you will surprise yourself; you will make a difference in your world."},
+  {id:6,text:"A time of testing is a time to strengthen one's relationship with God."},
+  {id:7,text:"Whatever your challenges are as a Christian, they are a way of correction."},
+  {id:8,text:"The more the correction, the more the greatness."},
+  {id:9,text:"Satan wants all your focus to be on the things you do not have, without appreciating God for His past blessings in your life."},
+  {id:10,text:"Appreciate God for what He has done for you and He will do it again and again and again."},
+  {id:11,text:"The fact that you can preach, teach, have eloquent speech and the ability to inspire people or quote the Bible from Genesis to Revelation does not mean that you are suitable for God."},
+  {id:12,text:"To be suitable, you must honour Jesus with your character."},
+  {id:13,text:"You can read your Bible, think and pray all day but unless you live in God's Word as well, you miss the point."},
+  {id:14,text:"When you have a relationship with Jesus Christ, you change and become a man who is directed by your Heavenly Father, not by the influence of others."},
+  {id:15,text:"God is not looking for perfection but availability."},
+  {id:16,text:"Those who would come to God must do so with humility and sincerity of mind and not confession in the form of fasting and praying or waving hands in worship without a thorough reformation of heart and life."},
+  {id:17,text:"When we humble ourselves for Christ's sake, He would exalt us in His own time and season."},
+  {id:18,text:"After our hard work, God will still have to mark it."},
+  {id:19,text:"True humility means total dependence on God for everything."},
+  {id:20,text:"In our approach to God in prayers, we must first see ourselves as sinners undeserving of His presence before we are fit to be dignified or honoured."},
+  {id:21,text:"The words you speak determine the life you enjoy."},
+  {id:22,text:"When you speak negatively about a situation, you are worsening the situation and you are not ready to revive it."},
+  {id:23,text:"Your words are capable of drawing people towards you or driving people away from you."},
+  {id:24,text:"Words are the bridge to your future."},
+  {id:25,text:"Instead of criticizing others, we should show by the way we live that Christ lives in us."},
+  {id:26,text:"With God, you can face life's final deadline with confidence."},
+  {id:27,text:"As a Christian, the battle for survival is not a personal challenge but one against God. It is an opportunity to honour God before men."},
+  {id:28,text:"No one can be in a place before God. He is always one step ahead."},
+  {id:29,text:"You should not do what many do but what the best do."},
+  {id:30,text:"If God would gratify all our desires, it would soon appear that we desire fame and authority and are unwilling to taste of Christ's cup or have His baptism."},
+  {id:31,text:"As Christians, we are commanded to follow these tiny steps of faith with patience in Christ Jesus for there is no shortcut to spiritual maturity."},
+  {id:32,text:"As God oftentimes grants in wrath, He sometimes denies in love."},
+  {id:33,text:"Those who have the greatest and most positive impact on the society today are not concerned with fame or popularity."},
+  {id:34,text:"Those who bless God in their trials will be blessed by God through their trials."},
+  {id:35,text:"Those who have resolved to serve the Lord in truth and in faith will encounter difficult situations."},
+  {id:36,text:"Crises cannot break the one who relies on God's strength for everything."},
+  {id:37,text:"There is nothing more ridiculous than to allow your present situation to cause you to doubt the fulfillment of God's Word or promises for your life."},
+  {id:38,text:"Personal improvement and fulfillment in life come through the continual process of learning from both negative and positive experiences."},
+  {id:39,text:"Those who bless God in their trouble or difficulty prove their sonship."},
+  {id:40,text:"It is our failure to give Christ His proper position in our heart that is actually responsible for the crisis of our faith."},
+  {id:41,text:"No one can grow without challenges and opposition."},
+  {id:42,text:"The thing that keeps us from despairing is not what we see but what we believe."},
+  {id:43,text:"Believing demands action; believing creates action."},
+  {id:44,text:"It is time to do something different to change your life from failure to success."},
+  {id:45,text:"The blessings of the world enrich the body temporarily; the blessings of Christ enrich the soul for eternity."},
+  {id:46,text:"If you don't prosper in your spiritual life and you seem to prosper in some other areas it is dangerous; satan will enslave you."},
+  {id:47,text:"True joy comes from loving Jesus, not from the things we amass."},
+  {id:48,text:"We overcome by keeping our purpose, our vision and our mission in the forefront of our minds."},
+  {id:49,text:"No matter the situation you are in, if your purpose is clear, hard times must not stop you but should encourage you to exercise your faith as a Christian."},
+  {id:50,text:"When God is executing His plan in our lives, He also designs and arranges events which will continue to unfold until His purpose is revealed."},
+  {id:51,text:"If the situation you are in now does not guarantee your future, do not despair; the end has not come, the best is always yet to come."},
+  {id:52,text:"There is something far more important than your present situation — your divine destiny."},
+  {id:53,text:"When we accept adversity, enduring every pain, then we would learn what we should know and our grief will turn to gain."},
+  {id:54,text:"Victory in Christ Jesus is not for those who quit but for those who endure."},
+  {id:55,text:"It is not what men say about you that really matters in this life; it is what you believe about yourself that matters."},
+  {id:56,text:"When you know you are who God says you are, you will stay focused on your goal alone and nothing can change your focus."},
+  {id:57,text:"A resolve to do whatever proper thing it takes separates the weak from the strong."},
+  {id:58,text:"The mind will always resent what it cannot master."},
+  {id:59,text:"When God sees you, He sees something that everyone else ignores."},
+  {id:60,text:"One of the things that gives satan authority, legal right over a person is sin."},
+  {id:61,text:"Forgiveness of sin strikes the root of all pains — all discomfort."},
+  {id:62,text:"When God heals you, He heals you effectively and He does so for the salvation of your soul."},
+  {id:63,text:"Sin is the disease of the soul; when it is pardoned, you are healed."},
+  {id:64,text:"When God is supporting your position, you have the authority to say \"No\" to sin and \"Yes\" to righteousness."},
+  {id:65,text:"Asking God for a specific thing would amount to limiting God to a certain answer."},
+  {id:66,text:"Those who are emotionally controlled lack the sense of objectivity."},
+  {id:67,text:"When we pray, the answer we get depends on how God chooses to implement His will in that matter."},
+  {id:68,text:"It takes the maturity that comes from faith to realize that our responsibility to God is a commitment and fellowship with Him rather than sacrifice."},
+  {id:69,text:"We must devote our whole spirit to and employ it in the service of God because man's spirit, when free, is sensitive to the Spirit of God but if bound or burdened, it loses its sensitiveness and therefore becomes useless as an instrument."},
+  {id:70,text:"Positive examples are tremendous motivators for success just as negative examples are tremendous motivators for failure."},
+  {id:71,text:"To the people of the world, trouble, affliction, poverty and the like are a poison that kills man's happiness and zeal to move forward but to the people of God, these things serve as a tonic, a driving force to a higher aspiration."},
+  {id:72,text:"Fear and insecurity dominate a life without faith."},
+  {id:73,text:"Whatever situation you are in as a Christian, it would be too early to grumble, murmur, complain or take a shortcut without finding out what God says about it."},
+  {id:74,text:"Anytime you are face to face with uncommon challenges, do not lose heart. They may be to prepare you for the uncommon blessings that are waiting ahead of you because uncommon blessings always attract uncommon challenges."},
+  {id:75,text:"Jesus spoke the Word aloud directly to satan in the wilderness, thus giving a battle plan to Christians on how to defeat satan."},
+  {id:76,text:"The Bible says that the mind is never free. You are either thinking of doubt or thinking of faith."},
+  {id:77,text:"Thoughts are like currents moving through the air. They are capable of drawing you towards God or driving you away from God."},
+  {id:78,text:"Your thoughts are capable of bringing you blessing or denying you of blessing."},
+  {id:79,text:"If you confess sickness, it develops sickness in your system. If you confess doubt, your doubt becomes stronger. If you confess lack of finances, it stops the money coming in. Your confession reveals whether you are a loser or winner."},
+  {id:80,text:"Jesus did not come for the righteous, He came for the unrighteous; He did not come for the knowledgeable but to call the ignorant to understanding."},
+  {id:81,text:"Spiritual insight into Christ Jesus can only come by reading the Bible with devotion."},
+  {id:82,text:"God will not open the door of wisdom to the one who keeps his Bible shut."},
+  {id:83,text:"Knowledge deals with the explanation, unfolding and correlation of Gospel facts."},
+  {id:84,text:"No one was born with great knowledge. You discover what you know and you become what you are."},
+  {id:85,text:"The work of the Holy Spirit begins in the understanding because the first ingredient in Scriptural faith is knowledge."},
+  {id:86,text:"That man mocks and belittles your ideas does not change who you are in the sight of God."},
+  {id:87,text:"When others say, \"The end has come\", Christians say, \"The best is yet to come\". When others say, \"There's no way\", Christians say, \"God will make a way where there seems to be no way\". When others say, \"I'm finished\", Christians say, \"My problem is finished\" because of what Jesus declared on the Cross."},
+  {id:88,text:"For each obstacle you face, there is a lot of experience you acquire."},
+  {id:89,text:"The lessons you learn from your failure prepare you for the responsibilities and challenges of success."},
+  {id:90,text:"No mortal man or devil can supersede the plan of God for your life. There is only one person who can get you out of the will of God, and that is you."},
+  {id:91,text:"When you are impatient about tomorrow, you will not be able to differentiate between God's blessings and satan's bait as you face some difficult circumstances."},
+  {id:92,text:"If you do not know the purpose of your blessing, you will make foolish mistakes that will cost your life."},
+  {id:93,text:"God is willing to give us all we need but He may not give us all we want, because man's needs are unlimited."},
+  {id:94,text:"The greatest thing satan aims is to break your relationship with God."},
+  {id:95,text:"If you make God your heart's delight, you will have your heart's desire."},
+  {id:96,text:"Jesus Christ is looking for full-time followers not part-time followers."},
+  {id:97,text:"In order to maintain God's gift, we need God's character."},
+  {id:98,text:"God gave us the Bible to show us the way of salvation and to teach us how to live for Him."},
+  {id:99,text:"Each time you act on the Word of God, you step closer to God and hear His voice clearer, but each time you focus on this world and choose worldly consideration above God, you step closer to satan."},
+  {id:100,text:"To the extent you think the thoughts of Christ, to that same extent do you have the presence of God in your life. The extent to which you reject His light, to that extent will you be filled with terrifying darkness."},
+  {id:101,text:"Today, our attitude in prayer is to instruct God in the way He should go whenever we are facing unpleasant situations, without finding out whether or not what we are going through is meant to glorify God's name."},
+  {id:102,text:"In our spiritual walk with God, sometimes it seems as if we are troubled on every side. Under such situations, many cry unto the Lord, not out of faith but out of fear, panic and lack of faith."},
+  {id:103,text:"God also understands the language of sighs, tears, meditation, earnest heart desires and wishes of the man of faith."},
+  {id:104,text:"To have faith in God does not only mean to pray; there are times we must pray with faith and times we must act with faith. In other words, there are things we must do ourselves and things we wait for God to do."},
+  {id:105,text:"Act faith now; apply yourself to your business by starting with the provision of your disposal now."},
+  {id:106,text:"Man has an immortal soul; therefore, the happiness provided is eternal life as a gift and with it He gives assurance of Heaven."},
+  {id:107,text:"As there is eternal life for us who are Heaven bound, so there is an eternal destruction to the children of perdition — the citizens of hell. Their father knows them by name, just as they know themselves."},
+  {id:108,text:"By their fruit, character and attitude to life we know who the children of God are: They are never anxious for anything."},
+  {id:109,text:"The ungodly — candidates of hell — are the opposite of the righteous, both in character and condition; they bring forth no fruit; they are like chaff blown away by the wind. They have no place in the congregation. They run while no one pursues them. The Lord curses everything they lay their hands on."},
+  {id:110,text:"Shepherds often lose some of their sheep to perish but our Lord Jesus Christ has vowed that none of His sheep shall perish, not even one."},
+  {id:111,text:"The quality of faith is not measured by our attitude to God when things are good but when times are hard — when our fate seems to hang in the balance."},
+  {id:112,text:"The opening of our eyes of faith is the silencing of our fears."},
+  {id:113,text:"By faith, your fear is defeated and you would see that by might, shall no man prevail."},
+  {id:114,text:"Instead of magnifying the causes of your fears, you ought to arm yourself with the thoughts of God."},
+  {id:115,text:"When your focus is on God, you would be calm, calculated and determined, even when everything around you is unquiet."},
+  {id:116,text:"Faith is not a product of the reasoning faculties but of the recreated spirit."},
+  {id:117,text:"A believer does not have strength as long as he operates in the natural."},
+  {id:118,text:"The more we get into the natural, the more satan rises up and becomes bigger. On the contrary, the more we get into faith, the more satan becomes smaller."},
+  {id:119,text:"Unless you decide to look at life from God's point of view, you would live a defeated life and you would go to the grave prematurely."},
+  {id:120,text:"While death is at work upon those who operate in the natural, life is at work upon those who walk by faith, because Jesus Himself is the very Bread of life."},
+  {id:121,text:"We cannot understand God by feelings but by what the Word says about Him."},
+  {id:122,text:"Your faith must be controlled by God's Word, not by what you feel, what circumstances look like, or what others tell you."},
+  {id:123,text:"Jesus' ability to work miracles was reduced where unbelief prevailed."},
+  {id:124,text:"An atmosphere of unbelief makes it difficult for men of faith to excel."},
+  {id:125,text:"If you believe in Jesus Christ, you can say what He has said and do what He has done."},
+  {id:126,text:"When there is a change of mantle, there must be a change of location."},
+  {id:127,text:"The plan of God for us is beautiful. Everything is beautiful in its time, yet that time is limited."},
+  {id:128,text:"God allows everything to take place at their appointed time and season. We may not understand it, but it is this that constitutes the beauty in creation."},
+  {id:129,text:"When you humble yourself for Christ's sake, He will exalt you in His own time and season."},
+  {id:130,text:"When you are so tired and sick of the world, you are ready to embrace the superior order of Christ."},
+  {id:131,text:"Miracles are wrought in the name of Jesus, not by repeating the name as a charm but by believing it as a divine revelation of grace and goodwill to men."},
+  {id:132,text:"Your capacity to believe must be strong enough to attract and accommodate all rights and privileges in Christ."},
+  {id:133,text:"If you have a strong capacity to believe, anything you do in the name of Jesus is done by Jesus Himself."},
+  {id:134,text:"Man can only have and exercise what he believes he has."},
+  {id:135,text:"If you realise your capacity to believe is not enough, you can offer prayers of faith for it and Jesus will enlarge your spiritual coasts."},
+  {id:136,text:"Looking the other way when your brother is in trouble is equal to rejecting Christ Himself."},
+  {id:137,text:"We serve God when we help our fellow brother."},
+  {id:138,text:"Our position in Christ Jesus is enhanced each time we help someone in trouble."},
+  {id:139,text:"The Lord is not so much interested in how many times you go to church, pray and fast a day, how much Christian service you render, how much tithe and offering you pay in the church, the titles and names you bear, as the number of people whose lives you have affected."},
+  {id:140,text:"Whatever is in your hands now is a solution to someone else in need."},
+  {id:141,text:"Man cannot discover new oceans if he does not lose sight of the shore."},
+  {id:142,text:"Believe in your dream! When you believe in your dream, you become a man of vision."},
+  {id:143,text:"If you are a man of vision, no matter what constitutes the obstacles on your way, you can never be stopped. Instead of pressure and tension reducing your vision, it will even enlarge your strategies."},
+  {id:144,text:"When you know your real value, your enemies may try to strip you of outward prestige and beauty but they cannot take from you the wisdom and grace of God."},
+  {id:145,text:"God is more concerned with our future than He is about our present state."},
+  {id:146,text:"What you are feeling now is as a result of your focus."},
+  {id:147,text:"The person that folds his hands will not have any record."},
+  {id:148,text:"Worrying about the future destroys our sense of judgement."},
+  {id:149,text:"The cause of killing, stealing and destruction is the urge to store up treasures here on earth."},
+  {id:150,text:"If you give your attention to God, you are what God says you are, you can do what God says you can do, you have what God says you have."},
+  {id:151,text:"Life is a battlefield and the sooner you understand this, the wiser you will be."},
+  {id:152,text:"Afflictions are meant for our spiritual benefit so that we may learn to pray the more."},
+  {id:153,text:"Pride is a sin in us by nature; we must be cautioned and armed against it."},
+  {id:154,text:"If an answer is not given for the first prayer nor to the second, we must hold on and hold out till we receive an answer."},
+  {id:155,text:"Warfare is necessary for your victory."},
+  {id:156,text:"Abel gave in faith. I mean he gave with an eye to God's will, honour and glory. Cain gave to honour himself and dishonour God, and so it turned to sin against him."},
+  {id:157,text:"Abel used his substance to demonstrate the state of his mind as a penitent soul while Cain was arrogant and unrepentant."},
+  {id:158,text:"It is common for those who have rendered themselves unworthy of God's favour to have hatred against those who God favours."},
+  {id:159,text:"Giving offers us the opportunity to reshape our destiny. When you give, you are reshaping your destiny."},
+  {id:160,text:"When God is honoured in our offering, whether we die or live, it does not matter. When God is dishonoured in our offering, we are doomed."},
+  {id:161,text:"A true Christian should see giving as an assignment from God."},
+  {id:162,text:"When we give, it makes us like unto God, who gives to all and receives from none."},
+  {id:163,text:"Until we begin to accept the differences in our personalities, we cannot move forward."},
+  {id:164,text:"He who finds it difficult to forgive fails to understand the absolute truthfulness of God's Word which says in Romans 3:23 \"All have sinned and fallen short of the glory of God\"."},
+  {id:165,text:"Forgiveness does not mean ignoring what has happened. It does not mean that you sweep the dirt under the rug. Forgiveness is an awareness that no one is perfect."},
+  {id:166,text:"The fact that we disagree on a certain issue should not break our union or our friendship because there is always a way out in Christ Jesus."},
+  {id:167,text:"To come to a place of reconciliation, you must first discover your weakness and when you do, you will discover that you need to forgive because you need to be forgiven."},
+  {id:168,text:"Joshua's consistency and obedience to God's instruction are a challenge to all Christians today, especially the busy elites of the www.com."},
+  {id:169,text:"As Christians, our key responsibility in life is to trust the Holy Spirit, to keep His Word in our mouth, in our heart and in every conversation."},
+  {id:170,text:"Today, everyone desires breakthrough, whereas disappointment most times serves to keep us for a new level in life."},
+  {id:171,text:"The principle of life says that nothing happens for nothing; nothing comes by chance. If you understand this principle, you will always reflect on life itself, rather than the situation you are in."},
+  {id:172,text:"God delivers His faithful servants out of trouble and puts honour upon them and He is not far from those who worship Him in truth and in faith."},
+  {id:173,text:"There is something far more important than your situation. Beyond your situation lies God's purpose for your life."},
+  {id:174,text:"God wants you to succeed but He wants you to succeed with a purpose."},
+  {id:175,text:"When we are sick and tired of our worldly business and frustrated in our worldly affairs, we are welcome to Christ."},
+  {id:176,text:"You have been given a good destiny but destiny can be changed when you don't know where you are destined to be."},
+  {id:177,text:"As Jesus said to Peter, He says to you, \"If you have ever confessed failure before, stop confessing failure from today because I am here to support your position.\""},
+  {id:178,text:"Our confession governs our faith."},
+  {id:179,text:"Confession builds the road over which faith carries its mighty cargo."},
+  {id:180,text:"You think right when, by an act of faith, you begin to think not of your limitations or shortcomings but of your righteousness in Christ Jesus."},
+  {id:181,text:"The conscience is God's instrument for discernment."},
+  {id:182,text:"Words spoken in harmony with God's Word work wonders."},
+  {id:183,text:"God cannot work miracles through you except by your capacity to believe."},
+  {id:184,text:"Faith grows spontaneously the moment you realise that God is reliable."},
+  {id:185,text:"It is better not to receive something you cannot maintain because it will expose you and put you in the hands of enemies."},
+  {id:186,text:"Without faith, no one can maintain the blessings of God."},
+  {id:187,text:"You maintain your life if you live the life of faith."},
+  {id:188,text:"Engage your heart with the Word of God you have read attentively, slowly and repeatedly and it will begin to influence your conduct and character."},
+  {id:189,text:"Our heart is the contact point between the visible and invisible; between the material and immaterial world."},
+  {id:190,text:"Offence has created a wall between us and God."},
+  {id:191,text:"We resist the devil by not becoming offended."},
+  {id:192,text:"You will receive in a moment what you have been seeking for years, the moment you let go of your offence."},
+  {id:193,text:"True Christianity lies in the heart, in the purity of the heart."},
+  {id:194,text:"If we fail to see that there are powers that cause one to be bowed down in bondage, we will fight the wrong battle."},
+  {id:195,text:"Our battle is not against flesh and blood but principalities and powers that cause tension and pressure in our lives."},
+  {id:196,text:"Until a person is willing to admit that he is a sinner in need of salvation, he cannot experience freedom from guilt, fear, inferiority and condemnation, which are four major problems that rob Christians of their blessings."},
+  {id:197,text:"Satan uses our weakness or limitation as a bait to trap us from running a straight race with God."},
+  {id:198,text:"God is always ready to readmit His people, who come to Him in humility and repentance, to the right position in His glory."},
+  {id:199,text:"What it takes gold to be gold is what it takes you to be a Christian."},
+  {id:200,text:"There are some challenges caused by yourself and when you cause it, God will withdraw His strength."},
+  {id:201,text:"If you have not engaged your heart with God's Word, you would murmur and rebel when challenges come, instead of finding out what God has to say about those challenges."},
+  {id:202,text:"We are good at sending our prayers up to God but we are not good at sitting back in faith to hear what God has to say about our situation."},
+  {id:203,text:"When you stay in faith in Christ Jesus, that is when you can hear God's voice most clearly."},
+  {id:204,text:"Jesus Christ did not come for the righteous but to seek for the unrighteous and bring them to the righteousness of God."},
+  {id:205,text:"Forgiveness is a bridge to where God dwells. Correction carries us to that place. It is a place of good success, a place of peace and comfort."},
+  {id:206,text:"The harbouring of the spirit of unforgiveness breaks our communion with God."},
+  {id:207,text:"He who does not forgive cannot be entrusted with the power to heal, to bless, to overcome."},
+  {id:208,text:"Dirty as you may be, Jesus can still cleanse you."},
+  {id:209,text:"When we examine our daily life, we will find out how much faith we have."},
+  {id:210,text:"Faith is manifested in the small things in our daily life."},
+  {id:211,text:"Satan attacks you where you believe you don't need God."},
+  {id:212,text:"Big situations happen occasionally but little situations happen all the time."},
+  {id:213,text:"Faith is there for our challenges. It must be confessed with the mouth, worked out in action and tested by tribulation."},
+  {id:214,text:"Some people see trials, tribulations or challenges as poison that kills one's happiness, desire and zeal to move forward in life but to people of God, trials, tribulations or challenges are a tonic to their spiritual growth; they are a driving force to a higher aspiration in life."},
+  {id:215,text:"Sometimes, if we go too far as a result of pride and arrogance, the Lord may permit poverty, sickness, setback or any foolish thing in order to keep us from losing our salvation."},
+  {id:216,text:"When you run away from trouble, you run away from solution, success and breakthrough."},
+  {id:217,text:"When you are in a place where God wants you to be, satan would want to offend you to pull out."},
+  {id:218,text:"The beauty of our Christian journey is the trials, temptations, difficulties and challenges we encounter on our way to redemption."},
+  {id:219,text:"Your present situation, no matter how hard it is, is meant for your spiritual benefit."},
+  {id:220,text:"When we talk of challenges, knowledge is not the key; obedience is."},
+  {id:221,text:"Challenges determine where you are spiritually."},
+  {id:222,text:"Challenges reveal the true condition of man's heart."},
+  {id:223,text:"Physical growth is a function of time; academic growth is a function of learning, whereas spiritual growth is the function of obedience to the will of God."},
+  {id:224,text:"Jesus learned obedience by the things He suffered. We learn obedience by the difficulties and challenges we face today."},
+  {id:225,text:"A believer does not have strength as long as he operates in the natural."},
+  {id:226,text:"People who are seeking experiences always walk by the senses, which are temporal and have no lasting value."},
+  {id:227,text:"Man continues to search for outer beauty, splendour and prestige yet all that glitters is not gold."},
+  {id:228,text:"A man is what he thinks about all day long; the level of the thoughts of your heart determines your life."},
+  {id:229,text:"As Christians our heart must be active, strong and alert; if not, the enemy of our soul will take hold of it and begin to manipulate our thoughts."},
+  {id:230,text:"A genuine spiritual experience needs to be tested in the face of the real situation in order to expose the reality of the experience."},
+  {id:231,text:"When you are facing the uncertainties of life, do not think that God has abandoned you but look first to the Cross, where the price was paid for the wisdom and knowledge you need to handle such a situation."},
+  {id:232,text:"As a genuine believer, failure, poverty, embarrassment, imprisonment can humiliate you but cannot destroy you."},
+  {id:233,text:"As a Christian, when you pray, the answer you receive depends on how God chooses to implement His will in that situation."},
+  {id:234,text:"When you handle your situation with care, someone in the palace will call for you just as Pharaoh called for Joseph."},
+  {id:235,text:"The hour of Christ's death was the beginning of His glorification and our redemption."},
+  {id:236,text:"The hour of your trial marks the dawn of your testimony."},
+  {id:237,text:"You must be willing to go through a season of pain in order to create an eternity of gain."},
+  {id:238,text:"Sometimes we must do things we hate in order to create something we love."},
+  {id:239,text:"Jesus had confidence in His own resurrection and that enabled Him to endure His crucifixion."},
+  {id:240,text:"When you know the purpose of your situation, your fear of that situation vanishes."},
+  {id:241,text:"Do you feel as if life has cheated on you? If you do, look in faith to Jesus. He was unjustly nailed to a cross so you could be forgiven of your sin and have a life that is fulfilling."},
+  {id:242,text:"Let us leave tomorrow's troubles for the One who bore our troubles on the Cross."},
+  {id:243,text:"As Christians, whenever we are tempted, we should always remember that our foundation, defence or answer is quite simple: the written and eternal Word of God."},
+  {id:244,text:"The first place to be victorious is in our spiritual life and in our mind because victory does not start around us; it begins within us."},
+  {id:245,text:"The management of our heart and its thoughts is fundamental to our faith and holy living."},
+  {id:246,text:"When we learn to use the name Jesus Christ according to the Word of God in the power of the Holy Spirit, we will have the secret that shook the whole world through the Apostles."},
+  {id:247,text:"When God is involved in your battle, your victory is assured because the extent of His care and the strength of His might in our lives weaken and frustrate our adversaries."},
+  {id:248,text:"The lifestyle God expects from us as Christians is a lifestyle of positive faith; I mean positive thinking, positive talking and positive acting."},
+  {id:249,text:"Trouble and affliction serve in moving us closer to God."},
+  {id:250,text:"As a Christian, your condition or situation does not affect your relationship with God."},
+  {id:251,text:"What you say will become a visible reality in the natural world if you steadfastly hold on to your confession of faith."},
+  {id:252,text:"Beyond your present situation is revival, renewal and redemption."},
+  {id:253,text:"The choices we make determine whether we are children of God or children of satan."},
+  {id:254,text:"An excuse is a reason, whether genuine or fake, which we give to explain or to defend our wrongdoing."},
+  {id:255,text:"All men fall but great men get back up."},
+  {id:256,text:"If the curse of imperfection hits, it is our responsibility to confess to God and receive His mercy, learn from it and keep on growing."},
+  {id:257,text:"It is not that children of God do not wrong but when they do, the guilt of that action would not allow them to have peace of mind until they ask for and obtain forgiveness."},
+  {id:258,text:"When we sin or attempt to do so, the Holy Spirit prompts our conscience to accuse us to repentance."},
+  {id:259,text:"Instead of allowing our sin to drive us from His presence, it should be the reason for coming closer to Him."},
+  {id:260,text:"We should not allow the guilt of our sin to rob us of the peace we would receive in Christ's pardon."},
+  {id:261,text:"Pardon puts peace in the heart of the one who truly repents."},
+  {id:262,text:"Disappointment sometimes serves to keep us for a new level in life."},
+  {id:263,text:"Be patient; God's response is not for those in a hurry."},
+  {id:264,text:"When trouble comes to the man or woman of faith, there is always a future but to a man or woman without faith, the end has come."},
+  {id:265,text:"As a man of faith, you must find ways of building bridges which close the gap from where you are to your destination."},
+  {id:266,text:"Look beyond your situation because the thing that keeps us from despairing is not what we see but what we believe."},
+  {id:267,text:"When we plant wrong seeds a wrong harvest will come."},
+  {id:268,text:"You take a step back when you start complaining."},
+  {id:269,text:"When you have a challenge and that challenge causes you to depend on God, this means your challenges are meant for promotion."},
+  {id:270,text:"No matter your past, life does not completely close the door to opportunity."},
+  {id:271,text:"Stop combining where you are coming from with where you are going."},
+  {id:272,text:"There are two sources of greatness in this world: God and satan. To be great born of God is to derive your resources from God, while to be great born of satan is to derive your resources from satan."},
+  {id:273,text:"When God is the source of your strength, no one can be against you."},
+  {id:274,text:"Satan always uses your situation. This is why we should not be misled by our situation."},
+  {id:275,text:"Many people today, in their attempt to beat God's appointed time, they have setbacks, others have setdowns and many others pay with their dear life."},
+  {id:276,text:"Those who fail to take these tiny steps cannot trust God and understand the basic truth about faith."},
+  {id:277,text:"Unforgiveness due to offence is one of the traps satan, the enemy of our souls, uses to hold us in bondage."},
+  {id:278,text:"When we get offended, we hardly realise that we are trapped."},
+  {id:279,text:"Offence itself is not deadly but harbouring or keeping it in our heart makes it deadly."},
+  {id:280,text:"Holding an offence against someone hinders and handicaps us from fulfilling our full potential."},
+  {id:281,text:"When you forgive and let go of offence, something will happen to you that cannot be explained by the natural mind."},
+  {id:282,text:"Man is a spirit, has a soul and lives in a body."},
+  {id:283,text:"As long as we live, we will continue to be confronted by situations that are not consistent with God's Word because we are a spirit learning to live in the natural world."},
+  {id:284,text:"When we are led by our intellect, feelings and emotions, we may confess faith in the Word but keep denying it in action."},
+  {id:285,text:"The best antidote against the poison of sin is to walk in the Spirit."},
+  {id:286,text:"God's Word has the ability to quicken us spiritually and helps our spirit govern our senses."},
+  {id:287,text:"When God, the Almighty comes to enquire for true believers, the question will not be, “Who can read and quote the Bible from Genesis to Revelation?” but, “Who hears, believes and obeys God's Word?”"},
+  {id:288,text:"It is the doer of the Word that receives things from God."},
+  {id:289,text:"A humble believing soul takes all that Jesus says and does in good faith and puts the best construction on it."},
+  {id:290,text:"God always rewards the obedient. He does not necessarily reward good, smart or wealthy people; He rewards the obedient."},
+  {id:291,text:"God is in all ages, revealing Himself through a generation of true believers."},
+  {id:292,text:"If you do not see yourself the way God sees you, you will not see your real value. And if you do not see your real value, you will not be able to fulfil the purpose which God has created you for."},
+  {id:293,text:"To a man of vision, no matter what happens, no matter what comes, there is always a future."},
+  {id:294,text:"When you know your real value, your enemies may rob you of liberty and confine you in a prison cell but they cannot shut you out of the throne of mercy and communion with God."},
+  {id:295,text:"God is more concerned with our future than He is about our present situation."},
+  {id:296,text:"Make the most of life because life is too short to waste time on things that have no lasting value."},
+  {id:297,text:"Your conscience is the very instrument used to guide you by the Holy Spirit."},
+  {id:298,text:"If you ignore your conscience when you pray, you are wasting your time."},
+  {id:299,text:"If you don't want trials, you don't want success in life."},
+  {id:300,text:"The bigger your success, the bigger your enemy."},
+  {id:301,text:"When offence comes, you lose control and you start doing the work of satan."},
+  {id:302,text:"When you are holding offences such as bitterness, anger, hatred, pain of the past and so forth, you are building a wall."},
+  {id:303,text:"When you begin to take responsibility for your problem, you will begin to think of what you can do to get out of it."},
+  {id:304,text:"God's Word is the seed of divine life that comes into our hearts and causes faith to grow."},
+  {id:305,text:"Faith exists at 3 levels:"},
+  {id:306,text:"When we take Jesus Christ at His Word, we will see the same results the early disciples saw."},
+  {id:307,text:"Acting on the Word of God makes Jesus Christ truly real to the believer."},
+  {id:308,text:"No state of being is as rewarding as living in tune with God."},
+  {id:309,text:"Resurrection, according to the 27th and 28th chapters of Matthew is a process, just as everything in life: Crucifixion, Death, Burial and Resurrection."},
+  {id:310,text:"HIS CRUCIFIXION: In Isaiah 53:5, the Bible says that He was flogged, tortured, humiliated and dehumanised before He was brutally murdered. But He responded with forgiveness, saying, “Father forgive them,” knowing that His death would accomplish salvation for mankind – that is for you and me."},
+  {id:311,text:"HIS DEATH: In Proverbs 21:18, by divine providence it was predestined that the wicked are a ransom for the righteous, the unjust for the just, the transgressors for the divine grace. But in this case of an unparalleled instance of divine grace, Jesus, the righteous was a ransom for the wicked."},
+  {id:312,text:"HIS BURIAL: Christ was buried so that His rejection could be complete."},
+  {id:313,text:"HIS RESURRECTION: In Romans 1:3–4, the Bible says that Jesus Christ was declared to be the Son of God with power according to the Spirit of holiness – by His resurrection from the dead."},
+  {id:314,text:"His resurrection is the joy of His friends and the terror and confusion of His adversaries."},
+  {id:315,text:"No one can succeed alone. We depend on others to succeed in our respective callings."},
+  {id:316,text:"As children of God, our union with Christ is the basis of our unity with one another."},
+  {id:317,text:"Challenges force us to look deep inward and come up with the result that no one knows us more than ourselves."},
+  {id:318,text:"Our relationship with God depends, far more than we think, upon our adjustment to one another."},
+  {id:319,text:"To improve in your relationships learn to give people another chance."},
+  {id:320,text:"When you know who God says you are, you will stay focused on your goal alone and nothing can change your focus."},
+  {id:321,text:"Adopting a life-style that is on purpose provides an opportunity to enrich others by leaving your imprint in a positive way."},
+  {id:322,text:"The better a man is, the worse he is thought of by his rivals."},
+  {id:323,text:"Your enemies may call you names in order to paint you black in the eyes of people, but the wisdom and the grace of God cannot be taken from you."},
+  {id:324,text:"The rich should not concentrate on their wealth; the poor should not concentrate on their poverty; the sick should not concentrate on their sickness, if they want to serve God in truth and faith."},
+  {id:325,text:"The greatest thing satan aims at in tempting good people is to overthrow their position as children of God, cut off their dependence on God, their duty to God and their communion with God."},
+  {id:326,text:"You should not because of your situation cut off your dependence on God."},
+  {id:327,text:"No matter what you are passing through, if it is allowed by God as a trial, you must not think it strange and doubt your Guard."},
+  {id:328,text:"Unfortunately, many today have surrendered to their fears while their hearts dream of a miracle."},
+  {id:329,text:"Our focus as Christians should be only on what God has to say about our situation, not what our natural circumstances have to say."},
+  {id:330,text:"Fear and insecurity dominate a life without faith."},
+  {id:331,text:"For the people of the world, trouble, affliction, poverty and the like are a poison that kills man's happiness and zeal to move forward but to the people of God, these things serve as a tonic, a driving force to a higher aspiration."},
+  {id:332,text:"Whatever situation you are in as a Christian, never for a moment acknowledge that God's ability cannot put you over."},
+  {id:333,text:"Jesus' temptation shows that He was not out for material and political gains but for the work of His Heavenly Father."},
+  {id:334,text:"If you are not out for material and political gains but to do God's work, you will overcome your temptation."},
+  {id:335,text:"When we presume upon our own power and tempt satan to tempt us, we provoke God to withdraw His power and leave us to our own power."},
+  {id:336,text:"If you go out of your way or duty because of the problem you have, you forfeit the promise and put yourself out of God's protection."},
+  {id:337,text:"People will challenge you, question you, try to get you off track. Do not yield to the temptation to act out of character."},
+  {id:338,text:"What you will become tomorrow depends on the choices you make today."},
+  {id:339,text:"Each time we want to focus on our future, satan is there to remind us of our unworthy past, in order to provoke our guilt and tarnish our future thereby."},
+  {id:340,text:"Satan aims to check our faith in the Word of God and to make us question the truth in the Word of God."},
+  {id:341,text:"If you want to be successful in life, do not look back; it is a dangerous thing to do unless it is meant to glorify God Almighty for what He has done in your life."},
+  {id:342,text:"Don't let your bad experiences wipe you out. Turn your scars into stars."},
+  {id:343,text:"Satisfaction in life is not about having children, money or other worldly possessions. You have to experience God."},
+  {id:344,text:"If you are focused only on making money, a large slice of life will pass you by."},
+  {id:345,text:"When your purpose in life is clear, your life will have meaning."},
+  {id:346,text:"Many today have changed the course of the history of their lives by taking shortcuts."},
+  {id:347,text:"Those who see God as one of those things – money, business, social relations, pleasures, comfort, art or societal status – can affect their relationship with God."},
+  {id:348,text:"To a man of faith whose focus is on God Almighty, every trouble is designed to advance his cause in his spiritual walk with the Lord."},
+  {id:349,text:"As genuine believers, when our troubles seem unyielding in spite of our prayers, fasting and struggles, it is in our own interests to get above our fears, anxiety and worries by leaving it to God Almighty."},
+  {id:350,text:"When you are doing something through God, He will continue to speak strength and courage through trials."},
+  {id:351,text:"The first step in knowing your calling is to get to know God better by reading His Word."},
+  {id:352,text:"When you let God transform you by the power of His Holy Spirit, He will literally begin to show you the way."},
+  {id:353,text:"God's Word is the tool in the hands of the Holy Spirit to nurture us and to furnish us with everything we need to succeed on earth."},
+  {id:354,text:"The Word of God must become your database for your personal opinion."},
+  {id:355,text:"Everyone who walks by faith will have testing."},
+  {id:356,text:"Your present situation is meant for your spiritual benefit."},
+  {id:357,text:"Faith focuses on Jesus Christ instead of our problems."},
+  {id:358,text:"The clearer sight we have of the power of Heaven, the less we shall fear the calamities of the earth."},
+  {id:359,text:"Life is not an encounter group, a bonding meeting or a playground; life is a battlefield where only the serious minded are victorious."},
+  {id:360,text:"He who desires triumph or victory must be ready to embrace war because triumph or victory is a product of warfare."},
+  {id:361,text:"Satan is a tempter; he uses our situation to tempt us in order to distract us from running the straight race with God."},
+  {id:362,text:"As a child of God, don't be ruled by your situation because your relationship with God is based on nothing else but God."},
+  {id:363,text:"To know the truth, our knowledge of the Holy Bible must be broad and holistic."},
+  {id:364,text:"The living Word is not in the book nor is it on the written page. The living Word is in the lips of the believers."},
+  {id:365,text:"God is in all ages gathering into Himself a generation of spiritual worshippers."},
+  {id:366,text:"We are called to God's kind of lifestyle. This is a lifestyle of positive thinking, positive talking and positive acting."},
+  {id:367,text:"Jesus is the Word by whom God speaks to us today. I am in It, you are in It and most importantly, God is in It. Here, you meet God face to face."},
+  {id:368,text:"When we know the Word is God speaking to us, it will not be difficult for us to obey It; it will not be difficult for us to act upon It."},
+  {id:369,text:"Man's judgement is based only on what is seen, heard and on what the circumstances look like. This kind of judgement is limited and cannot understand God."},
+  {id:370,text:"When you base your judgement only on what is seen, heard and on what the circumstances look like, you have not looked deep enough to the heart."},
+  {id:371,text:"If you have decided to make Jesus Christ your source and your protector, get ready for trial."},
+  {id:372,text:"Trials and temptations are the soil in which the man of faith flourishes."},
+  {id:373,text:"Each time God comes with a huge blessing for you, the first sign you will see is that you will receive attack."},
+  {id:374,text:"Christ's kind of belief is the transformative power of the universe; the power of change from what you are to what you want to be."},
+  {id:375,text:"It is time to dream again! I mean, it is time to plan greater plans because the secret of tomorrow's success lies in the plans of your daily routine."},
+  {id:376,text:"God often humbles those He designs to exalt and makes them the stone the builders reject which finally becomes the head cornerstone."},
+  {id:377,text:"When you are persecuted for what you believe in, count it all joy that your chance of victory is at hand."},
+  {id:378,text:"A genuine spiritual experience needs to be tested in a real situation in order to expose the reality of that experience."},
+  {id:379,text:"Being misjudged is the last stage before supernatural promotion."},
+  {id:380,text:"Life is in stages: a time to be born; a time to grow; a time to face persecution; a time to overcome and a time to show the proceeds of victory."},
+  {id:381,text:"Jesus knows how undeserving of His grace we are; that is why He has decided to brush aside our past in order to determine our future."},
+  {id:382,text:"The membership of our local Church is merely symbolic. What matters is Christ in you, the hope of glory."},
+  {id:383,text:"It is by looking forward that you discover new things, new horizons and new opportunities you would not have ordinarily dreamed of."},
+  {id:384,text:"If you are to solve today's problems, using the approach of yesterday, you would not make a difference."},
+  {id:385,text:"Unless you change your attitude, character and general approach to life, you would find yourself looking forward to a fresh beginning at the end of the year."},
+  {id:386,text:"Human rebellion makes us do things against God's instruction."},
+  {id:387,text:"It is not a mere wishful thinking that brings about contented life but a rightful focus."},
+  {id:388,text:"Those who have been delivered by Christ's Word must be ruled by His Word."},
+  {id:389,text:"When your spirit loses its sensitivity, your real value is at stake; it becomes a tool in the hand of the devil, a toy for manipulation."},
+  {id:390,text:"Serving God is to do what the best do."},
+  {id:391,text:"You are included in God's master plan but nothing great comes easy."},
+  {id:392,text:"Hard times can touch you but they cannot destroy you as a Christian."},
+  {id:393,text:"Successful people did not just drift to the top. It takes focused action, personal discipline and a lot of energy every day to make things happen."},
+  {id:394,text:"A true Christian is tested by his ability to face circumstances."},
+  {id:395,text:"Trials and tests promote and advance your course."},
+  {id:396,text:"Jesus loves those who are able to exercise great faith under great trials and temptation."},
+  {id:397,text:"Human rebellion makes us do things against God's instruction."},
+  {id:398,text:"It is not a mere wishful thinking that brings about contented life but a rightful focus."},
+  {id:399,text:"Those who have been delivered by Christ's Word must be ruled by His Word."},
+  {id:400,text:"When your spirit loses its sensitivity, your real value is at stake; it becomes a tool in the hand of the devil, a toy for manipulation."},
+  {id:401,text:"Serving God is to do what the best do."},
+  {id:402,text:"You are included in God's master plan but nothing great comes easy."},
+  {id:403,text:"Hard times can touch you but they cannot destroy you as a Christian."},
+  {id:404,text:"Successful people did not just drift to the top. It takes focused action, personal discipline and a lot of energy every day to make things happen."},
+  {id:405,text:"A true Christian is tested by his ability to face circumstances."},
+  {id:406,text:"Trials and tests are to promote and advance your course."},
+  {id:407,text:"Jesus loves those who are able to exercise great faith under great trials and temptation."},
+  {id:408,text:"Anointing does not work through plans, methods or machinery but through suitable men."},
+  {id:409,text:"Eloquence, friendliness or ability to inspire does not make you suitable; honouring Jesus with your character does."},
+  {id:410,text:"As physical growth is a function of time, intellectual growth is a function of learning and spiritual growth is a function of obedience."},
+  {id:411,text:"We grow in character through our obedience to God."},
+  {id:412,text:"Difficulties, challenges and seemingly impossible situations can be our greatest friends. They are an opportunity to run to God."},
+  {id:413,text:"As a believer, it is your relationship with God your Father that makes your troubles different."},
+  {id:414,text:"All of us have made decisions we regret and all of us can be forgiven and start over."},
+  {id:415,text:"It is not your weakness that matters to God but your willingness to get out of it."},
+  {id:416,text:"The unsaved can cry out for a thousand years but if there is no mediator, there is no hope for them. Jesus is our Mediator. He is the sinner's only Savior."},
+  {id:417,text:"God's kind of success has no biological attachment; it springs from Heaven."},
+  {id:418,text:"People with vision act at God's time."},
+  {id:419,text:"When you lack vision, you lack patience."},
+  {id:420,text:"The reason why we cannot endure insult or embarrassment is because we have alternatives."},
+  {id:421,text:"The strong are determined to do whatever possible and proper thing it takes to get their goal."},
+  {id:422,text:"Idle words can entertain men but cannot reach God."},
+  {id:423,text:"Words have the capacity to make and unmake."},
+  {id:424,text:"Your words can either build people up or pull them down."},
+  {id:425,text:"Vain and idle talk is a product of a vain and idle heart; they are unprofitable and not pleasing to God Almighty."},
+  {id:426,text:"With your words you constantly paint a public picture of your inner self."},
+  {id:427,text:"Prayer is an acknowledgement that there is a superior realm that controls the physical and invisible world."},
+  {id:428,text:"Faith is not a panic button pushed only when in trouble; it is a lifestyle of trusting God, in both good and hard times."},
+  {id:429,text:"Unpleasant situations discipline us and improve our Christian character, thus making us better disciples in Christ."},
+  {id:430,text:"Because of the lures and cares of the world, fleshly desires and the attraction of the world – pleasure has turned the heart of many from their Creator."},
+  {id:431,text:"Take care of the depth of your relationship with God and He will take care of the breadth of your success."},
+  {id:432,text:"No one can say “No” to sin without the help of the Holy Spirit."},
+  {id:433,text:"The glory of the world is the most charming temptation to the carnally minded."},
+  {id:434,text:"Temptation is the presentation of evil; it is an opportunity to choose temporary pleasure rather than permanent gain."},
+  {id:435,text:"If you go out of your duty, you forfeit the promise of victory and put yourself out of God's protection."},
+  {id:436,text:"For you to enjoy the proceeds of victory, you must be spiritually inclined."},
+  {id:437,text:"The uncertainty of the hour of Christ's return calls for vigilance and watchfulness."},
+  {id:438,text:"The Bible makes us understand that troubles are to teach us to be consistent and persistent in prayer."},
+  {id:439,text:"Prayer is a salve for every sore, a remedy for every malady."},
+  {id:440,text:"When we are afflicted with a thorn in our flesh, we should give ourselves to prayer."},
+  {id:441,text:"If an answer is not given to the first prayer nor the second, we must hold on until we receive an answer."},
+  {id:442,text:"Whatever situation you are in now as a Christian may be to prepare you for a new level or to strengthen your desire for God."},
+  {id:443,text:"Trusting God does not consist in praying alone. There are times to pray in faith and times to act in faith."},
+  {id:444,text:"Life does not just happen to us. It is all about choices and how we respond to every situation."},
+  {id:445,text:"No matter your past, life never completely closes the door to opportunity."},
+  {id:446,text:"God's opinion imparts a strength to endure the situation you are in."},
+  {id:447,text:"Your situation becomes easier to handle when you know it will not last long."},
+  {id:448,text:"The better a man is, the worse he is thought of by his rivals."},
+  {id:449,text:"When you are not relevant, nobody will bother about you."},
+  {id:450,text:"As we try to overcome our trouble, we are making history – history that people and children yet unborn will read about."},
+  {id:451,text:"When you begin to speak against your neighbour, you are fighting the wrong battle."},
+  {id:452,text:"We are to battle the spiritual entities that cause crisis and tension in our businesses, spiritual life, homes and marriages."},
+  {id:453,text:"Do not go and fight your neighbour but pray to deliver your neighbour."},
+  {id:454,text:"If we are strong spiritually, our love becomes protection against the hatred of the adversary."},
+  {id:455,text:"When you go the way of the Cross, you will begin to see every trial and persecution as a blessing because afflictions are meant for our spiritual benefit."},
+  {id:456,text:"A man can be a Christian in profession and yet not such in heart."},
+  {id:457,text:"If we resist the devil by an active, lively faith in Christ, satan will flee from us."},
+  {id:458,text:"If we think to resist satan by using the name of Christ as a charm, satan will prevail against us."},
+  {id:459,text:"As Christians our heart must be active, strong and alert; if not, the enemy of our soul will take hold of it and manipulate our thoughts."},
+  {id:460,text:"When we fight the wrong battle, we will continue to fight an unlimited battle."},
+  {id:461,text:"It is never proper to base faith on your improvement after prayer."},
+  {id:462,text:"If you must serve God with truth and faith, you should not allow your condition to mislead you."},
+  {id:463,text:"Outward affliction, wants and burdens are the great arguments satan uses to make people of God question their sonship."},
+  {id:464,text:"There is no reason for faith as good as God's Word."},
+  {id:465,text:"It honours God to believe Him even when every sense contradicts Him."},
+  {id:466,text:"Temptation can come in any form; they are not from God but from the adversary."},
+  {id:467,text:"A man of faith does things out of peace of mind, not for money, not for popularity, not for fame."},
+  {id:468,text:"Many have changed the history of their lives because of impatience and over-ambition."},
+  {id:469,text:"A man of faith does what he loves, not what others around him are doing."},
+  {id:470,text:"After you have struggled, laboured and worked hard as a man of faith, God will still have to mark it. If the result is good, give glory to God; if it is the opposite, submit your ways to Him because in every situation God is still saying something."},
+  {id:471,text:"It is not the year that makes us new; we make the year new by the way we live it."},
+  {id:472,text:"If we keep our resolutions, we feel fulfilled at the end of the year."},
+  {id:473,text:"If we fail to keep our resolutions, we look forward to a new beginning in the incoming year."},
+  {id:474,text:"Stop looking at where you are coming from and start looking at where you are going."},
+  {id:475,text:"Prayer to the Holy Spirit: “Act in me, O Holy Spirit, that I may keep my resolutions! Strengthen me, O Holy Spirit, to defend all that I promise! Guide me, O Holy Spirit, that I may do what is right in Your sight.”"},
+  {id:476,text:"If we were to solve the problem of a New Year using the approach of the old year, we would not make any difference."},
+  {id:477,text:"If you do not have a degree in poverty, your degree in blessing is questionable."},
+  {id:478,text:"If you have not engaged your heart with God's Word, you will murmur and rebel when challenges come instead of finding out what God has to say about them."},
+  {id:479,text:"Anytime you face uncommon challenges, do not lose heart. They prepare you for uncommon blessings."},
+  {id:480,text:"In the midst of setback people need hope – Jesus is the hope!"},
+  {id:481,text:"Fear changes our focus."},
+  {id:482,text:"Fear weakens our determination and willpower."},
+  {id:483,text:"When we cannot see beyond our immediate situation, we begin to panic."},
+  {id:484,text:"One thing is for the eyes of the body to open; another is for the eyes of faith to open."},
+  {id:485,text:"When you bother about a problem while neglecting its cause, you cannot have a lasting solution."},
+  {id:486,text:"Dealing with the problem while neglecting the cause is like cutting the branches of a tree while leaving the root."},
+  {id:487,text:"When your sins are forgiven, you are healed indeed because that is the root of the affliction."},
+  {id:488,text:"If you don't know the purpose of life, you may be overwhelmed by circumstances and take actions that destroy relationships beyond repair."},
+  {id:489,text:"It takes a reflective mind to discover that beyond your situation lies the promise of God for your life."},
+  {id:490,text:"Acting faith makes those things that are against us be for us."},
+  {id:491,text:"Focusing on Christ Jesus in the midst of trials puts everything else in perspective."},
+  {id:492,text:"Those who have a clear purpose in life always find room in their hearts to bless the name of the Lord, even when He takes away."},
+  {id:493,text:"Spiritual damage requires spiritual repair."},
+  {id:494,text:"Nursing bitterness, unforgiveness, anger and pain of the past damages your heart."},
+  {id:495,text:"Anytime you nurse a grudge, you indirectly give satan permission to strike your life."},
+  {id:496,text:"The dividend of forgiveness is freedom."},
+  {id:497,text:"Whatever situation you may find yourself in, do not doubt your faith; doubt your doubts because they are unreliable."},
+  {id:498,text:"Anytime you begin to feel sorry for yourself for what you don't have, consider all you do have and thank God."},
+  {id:499,text:"Doubt is not to overcome us but to sharpen our minds and strengthen our relationship with God."},
+  {id:500,text:"Our big problems will not seem so impossible if we let God answer our questions in His own schedule, not ours."},
+  {id:501,text:"The best remedy for doubt is to reflect on God's track record in your life."},
+  {id:502,text:"God does not need our sacrifice to take away sin but rather that we come to repentance."},
+  {id:503,text:"Repentance is not only feeling sorrow for sins committed but also breaking away from sin."},
+  {id:504,text:"Repentance is the only hope of receiving God's mercy."},
+  {id:505,text:"Our failure to admit our wrong prevents our harmony with God and creates an invisible barrier between us and Him."},
+  {id:506,text:"The greatest love Jesus Christ has given us is the opportunity to correct our mistakes."},
+  {id:507,text:"All men fall but the great ones get back up."},
+  {id:508,text:"The unrenewed mind wages war between faith and doubt – confessing the Word with the mouth while denying it in action."},
+  {id:509,text:"Knowing God is not only seeing His works but learning His ways."},
+  {id:510,text:"Jesus Christ does not mind doubt as long as you are seeking the answer from Him in the midst of that doubt."},
+  {id:511,text:"Your hands may be full of money and your brain full of information, but if your heart is empty, your life is very empty."},
+  {id:512,text:"In the university of God, however brilliant you may be, you will not be given double promotion. You must take every course because each course serves a purpose."},
+  {id:513,text:"Jesus is all the world to me, my life, my Joy, my all. He is my strength from day to day. Without Him I would fall."},
+  {id:514,text:"Worrying about tomorrow cripples our ability to think, act and exercise faith in the present. The present is the only time that is truly ours."},
+  {id:515,text:"Your success and happiness depend on your willingness to help others solve their problems."},
+  {id:516,text:"Every day, God has something to say to you. Even when He seems to be quiet, God is still saying something."},
+  {id:517,text:"A man’s life is what he thinks about all day long."},
+  {id:518,text:"The main thing about Christianity is not the work we do but the relationship we maintain and the atmosphere produced by that relationship."},
+  {id:519,text:"What you do in secret is what will answer you in the open. There is no shortcut to spiritual maturity. We are amde spiritual by living in the Word and by the Word living in us."},
+  {id:520,text:"Only your character can testify to the genuineness of your confession of Christ."},
+  {id:521,text:"It is time to do something different to change your life from failure to success."},
+  {id:522,text:"It is not all up to God, and it is certainly not all up to us; It takes God's ability and our willingness to bring about salvation."},
+  {id:523,text:"There is a constant war between the flesh and the spirit as long as we are in this world. A war is raging in your heart between faith and doubt, humility and pride, hope and despair, peace and anger, patience and impatience, knowledge and ignorance, self control and greed."},
+  {id:524,text:"When times are stable and the sea is calm and secure, no one is really tested."},
+  {id:525,text:"Everything big starts little, if something starts big, it calls for concern."},
+  {id:526,text:"It is better to live poorly upon the fruits of God's goodness than to live plentifully upon the products of our own sin."},
+  {id:527,text:"To learn how to hear God after prayer is a much greater blessing than what you are looking for."},
+  {id:528,text:"If you can't trsut God with medicine, you can't trust God without medicine."},
+  {id:529,text:"When a vision is from God, there will be a strong desire to make it happen. Even if you cannot see how, you will achieve it. No matter the obstacles on the way to your destination, you will always find ways of building bridges which close the gap from where you are now to your destination."},
+  {id:530,text:"While we are on the go, we need to stop between steps, to refocus on the Word and the will of God."},
+  {id:531,text:"Avoid the trap of looking back unless it is to glorify God for what He has done."},
+  {id:532,text:"Don't misinterprete God's Silence as rejection."},
+  {id:533,text:"As a Christian, when your trial is getting hotter, you are getting closer to your breakthrough! Keep pressing!."},
+  {id:534,text:"Whatever I am today is a product of that conviction that victory through Christ is victory indeed. The rest is history."},
+  {id:535,text:"Many store the bible in their Shelves, the best store it in their hearts."},
+  {id:536,text:"Life is too short to waste time on things that have no lasting significance."},
+  {id:537,text:"Jesus wants to express Himself and carry out His mission of love to others through you."},
+  {id:538,text:"If God has called you, the more they block your way, the more that trouble and temptation, the more God's love is provoked. Each attempt to stop you asks for more evidence from God."},
+  {id:539,text:"What can separate us from the love of God? An attempt to separate us by death simply releases us from the imprisonment of this world."},
+  {id:540,text:"A look of faith knows what God says about a situation - and what God says is final."},
+  {id:541,text:"If we make mistakes, as we all do - don't run from God, run to Him."},
+  {id:542,text:"As Christians, we say what God has said over and over until the thing promised in His Word and desired in our hearts is fully manifested in our lives."},
+  {id:543,text:"As we live in the Spirit, we live in the process of God's mind."},
+  {id:544,text:"The purpose of life is to glorify God in both good and hard times alike."},
+  {id:545,text:"When you are wired to God in a unique way, nothing can separate you from the love of God."},
+  {id:546,text:"Don't doubt your faith; doubt your doubts for they are unreliable."},
+  {id:547,text:"God will never allow a challenge that will surmount us; we are always greater than our challenges."},
+];
+];
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}
+function hl(t,q){if(!q)return esc(t);const e=esc(t),s=q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');return e.replace(new RegExp('('+s+')','gi'),'<mark>$1</mark>')}
+function render(list,q){
+  const ql=document.getElementById('ql'),nr=document.getElementById('nr'),vc=document.getElementById('vc'),rb=document.getElementById('rb');
+  if(!list.length){ql.innerHTML='';nr.style.display='block';vc.textContent='0';rb.textContent=q?'No results for "'+q+'"':'';return}
+  nr.style.display='none';vc.textContent=list.length;
+  rb.textContent=q?list.length+' result'+(list.length!==1?'s':'')+' for "'+q+'"':'';
+  ql.innerHTML=list.map(x=>`<div class="qi" id="q${x.id}" data-id="${x.id}">
+    <div class="qn">#${x.id}</div>
+    <div class="qt">${hl(x.text,q)}</div>
+    <div class="qa">
+      <button onclick="cp(${x.id})" id="cb${x.id}">Copy</button>
+      <button onclick="cl(${x.id})">Link</button>
+    </div>
+  </div>`).join('')
+}
+function cp(id){
+  const x=Q.find(q=>q.id===id);if(!x)return;
+  navigator.clipboard.writeText('"'+x.text+'" — TB Joshua (#'+id+')').then(()=>{
+    const b=document.getElementById('cb'+id);
+    if(b){b.textContent='Copied!';b.classList.add('ok')}
+    toast('Quote copied');
+    setTimeout(()=>{if(b){b.textContent='Copy';b.classList.remove('ok')}},2000);
+  });
+}
+function cl(id){
+  const url=location.origin+location.pathname+'#q'+id;
+  navigator.clipboard.writeText(url).then(()=>toast('Link to #'+id+' copied'));
+}
+function toast(m){
+  const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),2200);
+}
+function goTo(){
+  const v=parseInt(document.getElementById('gi').value);
+  if(!v||v<1||v>547)return toast('Enter 1–547');
+  const si=document.getElementById('si');
+  if(si.value){si.value='';render(Q,'');}
+  requestAnimationFrame(()=>{
+    const el=document.getElementById('q'+v);
+    if(el){el.scrollIntoView({behavior:'smooth',block:'center'});el.classList.add('flash');setTimeout(()=>el.classList.remove('flash'),2000);}
+  });
+}
+let tmr;
+document.getElementById('si').addEventListener('input',e=>{
+  clearTimeout(tmr);
+  tmr=setTimeout(()=>{
+    const q=e.target.value.trim();
+    if(!q){render(Q,'');return}
+    const words=q.toLowerCase().split(/\s+/);
+    render(Q.filter(x=>words.every(w=>x.text.toLowerCase().includes(w))),q);
+  },120);
+});
+document.getElementById('gi').addEventListener('keydown',e=>{if(e.key==='Enter')goTo()});
+function handleHash(){
+  const h=location.hash;
+  if(h&&h.startsWith('#q')){
+    const id=parseInt(h.slice(2));
+    if(id>=1&&id<=547){
+      setTimeout(()=>{
+        const el=document.getElementById('q'+id);
+        if(el){el.scrollIntoView({behavior:'smooth',block:'center'});el.classList.add('flash');setTimeout(()=>el.classList.remove('flash'),2000);}
+      },300);
+    }
+  }
+}
+render(Q,'');
+handleHash();
+</script>
+</body>
+</html>
