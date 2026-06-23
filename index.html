@@ -12,6 +12,9 @@
   --cream:#FAF6EE; --text:#1C1C1C; --muted:#6B7080; --border:#E2D9C8;
   --hl:#FFF3CD;
 }
+html[data-theme="dark"] {
+  --cream:#0D1526; --text:#E5DFD3; --muted:#8B95AA; --border:#1E2D4A; --hl:#3D2B05;
+}
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Outfit',sans-serif;background:var(--cream);color:var(--text);min-height:100vh}
 header{background:var(--navy);position:sticky;top:0;z-index:100;box-shadow:0 2px 20px rgba(0,0,0,.35)}
@@ -37,6 +40,7 @@ main{max-width:960px;margin:0 auto;padding:28px 24px 60px}
 #ql{display:flex;flex-direction:column;gap:0}
 .qi{display:flex;gap:0;border-bottom:1px solid var(--border);padding:16px 0;transition:background .15s;position:relative;scroll-margin-top:120px}
 .qi:hover{background:rgba(201,151,58,.04)}
+html[data-theme="dark"] .qi:hover{background:rgba(201,151,58,.09)}
 .qi:first-child{border-top:1px solid var(--border)}
 .qn{flex:0 0 52px;font-size:.72rem;font-weight:600;color:var(--gold);letter-spacing:.05em;padding-top:3px;user-select:none}
 .qt{flex:1;font-family:'Cormorant Garamond',serif;font-size:1.12rem;line-height:1.7;color:var(--text)}
@@ -56,6 +60,12 @@ main{max-width:960px;margin:0 auto;padding:28px 24px 60px}
 #toast.show{opacity:1;transform:translateY(0)}
 footer{background:var(--navy);color:rgba(255,255,255,.35);text-align:center;padding:20px;font-size:.75rem;letter-spacing:.04em}
 footer strong{color:var(--gold)}
+.tbtn{background:none;border:1px solid rgba(255,255,255,.2);border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:rgba(255,255,255,.6);transition:border-color .2s,color .2s;padding:0;flex-shrink:0}
+.tbtn:hover{border-color:var(--gold);color:var(--gold2)}
+.tbtn .icon-sun{display:none}
+.tbtn .icon-moon{display:block}
+html[data-theme="dark"] .tbtn .icon-sun{display:block}
+html[data-theme="dark"] .tbtn .icon-moon{display:none}
 @media(max-width:600px){
   .hi{padding:14px 16px 10px;gap:12px}
   .brand h1{font-size:1.3rem}
@@ -81,6 +91,10 @@ footer strong{color:var(--gold)}
     <span><strong id="vc">561</strong> quotes</span>
     <span>&middot;</span>
     <span>TB Joshua &middot; SCOAN</span>
+    <button id="themeBtn" class="tbtn" onclick="toggleTheme()" title="Toggle dark mode">
+      <svg class="icon-moon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="icon-sun" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </button>
     <div class="gw">
       <label for="gi">Go to #</label>
       <input type="number" id="gi" placeholder="1&#8211;561" min="1" max="561">
@@ -99,6 +113,9 @@ footer strong{color:var(--gold)}
 <div id="toast"></div>
 <footer><strong>TB Joshua</strong> &middot; Quotable Quotes &middot; Volumes 1 &amp; 2 &middot; 561 Quotes</footer>
 <script>
+function initTheme(){const s=localStorage.getItem('theme');const dark=s==='dark'||(!s&&window.matchMedia('(prefers-color-scheme: dark)').matches);if(dark)document.documentElement.setAttribute('data-theme','dark');}
+function toggleTheme(){const isDark=document.documentElement.getAttribute('data-theme')==='dark';document.documentElement.setAttribute('data-theme',isDark?'light':'dark');localStorage.setItem('theme',isDark?'light':'dark');}
+initTheme();
 const Q=[
   {id:1,text:"Jesus Christ has given us a mind and the ability to choose between right and wrong."},
   {id:2,text:"God's power cannot work in your heart unless your will is obedient to God's will."},
