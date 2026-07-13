@@ -4,6 +4,28 @@ Living log of substantive changes to `index.html` (quote content, numbering, and
 
 ---
 
+## 2026-07-13 — Added 8 new quotes (#674–681)
+
+**Summary:** User supplied 8 new quotes directly (not sourced from the web scrape) and asked for a spelling/word-usage check before adding. Corrected several typos and word choices, presented the corrected versions for approval, then appended as approved.
+
+**Corrections made:**
+- #674 — "situtation" → "situation"; "trade your joy **with** your situation" → "trade your joy **for** your situation" (for consistency with #675's "trade...for" phrasing).
+- #677 — "Often times" → "Oftentimes".
+- #678 — "you enemy" → "your enemy"; "attacka" → "attacks".
+- #680 — "as child of God" → "as a child of God"; "will impact strength" → "will impart strength" (word-choice correction — "impart" fits the sense of conferring strength; "impact" doesn't function as a transitive verb here).
+- #681 — Added missing opening quotation mark; "temptation" → "temptations" (plural, to match "Challenges" and "situations"); "the informant that" → "informants that" (subject-verb/number agreement).
+
+**Note:** user's original list included a 9th item, but no text was provided for it — only 8 quotes were added. If a 9th quote was intended, it still needs to be supplied.
+
+**Added:** new #674–681, appended straight after #673 (no renumbering of prior quotes).
+
+**Other updates bundled in because they touch quote numbering:**
+- Header quote count (`673` → `681`), footer text, go-to input placeholder/max, `goTo()`/hash-link bounds.
+
+**Files touched:** `index.html` only.
+
+---
+
 ## 2026-07-13 — Added 134 new quotes (#540–673)
 
 **Summary:** Scraped 188 unique T.B. Joshua quotes from 5 public quote sites, cross-checked all of them against the existing 539 quotes (exact-text match, then fuzzy word-overlap for reworded near-duplicates). 145 had no match and were presented for review; 19 were flagged as likely paraphrases of an existing quote and set aside by default. User reviewed both lists in a themed HTML checklist and approved 134 for addition (some from the "likely covered" set were pulled in on review too).
