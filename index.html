@@ -110,7 +110,7 @@ html[data-theme="dark"] .tbtn .icon-moon{display:none}
     </div>
   </div>
   <div class="mb">
-    <span><strong id="vc">681</strong> quotes</span>
+    <span><strong id="vc">684</strong> quotes</span>
     <span>&middot;</span>
     <span>TB Joshua &middot; SCOAN</span>
     <button id="themeBtn" class="tbtn" onclick="toggleTheme()" title="Toggle dark mode">
@@ -119,7 +119,7 @@ html[data-theme="dark"] .tbtn .icon-moon{display:none}
     </button>
     <div class="gw">
       <label for="gi">Go to #</label>
-      <input type="number" id="gi" placeholder="1&#8211;681" min="1" max="681">
+      <input type="number" id="gi" placeholder="1&#8211;684" min="1" max="684">
       <button class="gbtn" onclick="goTo()">Go</button>
     </div>
   </div>
@@ -133,7 +133,7 @@ html[data-theme="dark"] .tbtn .icon-moon{display:none}
   </div>
 </main>
 <div id="toast"></div>
-<footer><strong>TB Joshua</strong> &middot; Quotable Quotes &middot; Volumes 1 &amp; 2 &middot; 681 Quotes</footer>
+<footer><strong>TB Joshua</strong> &middot; Quotable Quotes &middot; Volumes 1 &amp; 2 &middot; 684 Quotes</footer>
 <script>
 function initTheme(){const s=localStorage.getItem('theme');const dark=s==='dark'||(!s&&window.matchMedia('(prefers-color-scheme: dark)').matches);if(dark)document.documentElement.setAttribute('data-theme','dark');}
 function toggleTheme(){const isDark=document.documentElement.getAttribute('data-theme')==='dark';document.documentElement.setAttribute('data-theme',isDark?'light':'dark');localStorage.setItem('theme',isDark?'light':'dark');}
@@ -820,6 +820,9 @@ const Q=[
   {id:679,text:"When you respond to your enemies, it gives them the next strategy to use."},
   {id:680,text:"The key to succeed in life, as a child of God: any time you face difficulty, quickly remember the times of difficult trials you faced in the past — this will impart strength to face the present difficulty you have now."},
   {id:681,text:"Challenges, temptations and situations are informants that promotion is coming."},
+  {id:682,text:"Your enemy loses no time to plot against you; you should lose no time to commit yourself to the Lord in prayer."},
+  {id:683,text:"There is power in my mouth, the belief in my heart is released by faith out of my mouth."},
+  {id:684,text:"If we take God's word to heart and truly make it a part of you by meditation, it will by it very nature change you and when it does, you will soon be called to act with God"},
 ];
 function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}
 function hl(t,q){if(!q)return esc(t);const e=esc(t),s=q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');return e.replace(new RegExp('('+s+')','gi'),'<mark>$1</mark>')}
@@ -856,7 +859,7 @@ function toast(m){
 }
 function goTo(){
   const v=parseInt(document.getElementById('gi').value);
-  if(!v||v<1||v>681)return toast('Enter 1–681');
+  if(!v||v<1||v>684)return toast('Enter 1–684');
   const si=document.getElementById('si');
   if(si.value){si.value='';render(Q,'');}
   requestAnimationFrame(()=>{
@@ -879,7 +882,7 @@ function handleHash(){
   const h=location.hash;
   if(h&&h.startsWith('#q')){
     const id=parseInt(h.slice(2));
-    if(id>=1&&id<=681){
+    if(id>=1&&id<=684){
       setTimeout(()=>{
         const el=document.getElementById('q'+id);
         if(el){el.scrollIntoView({behavior:'smooth',block:'center'});el.classList.add('flash');setTimeout(()=>el.classList.remove('flash'),2000);}

@@ -4,6 +4,24 @@ Living log of substantive changes to `index.html` (quote content, numbering, and
 
 ---
 
+## 2026-07-13 — Added 3 new quotes (#682–684)
+
+**Summary:** User supplied 3 more quotes directly. Flagged a few things during review (missing opening quote mark on #682; unusual clause phrasing in #683; a typo and a pronoun shift in #684) but user chose to keep the wording as submitted rather than apply the suggested fixes.
+
+**Kept as submitted (no wording changes):**
+- #682 — stray trailing quotation mark from the pasted text was stripped (data model doesn't wrap quote text in literal quote characters — consistent with every other entry), no other change.
+- #683 — added verbatim.
+- #684 — added verbatim, including "by it very nature" (not corrected to "its") and the "we"/"you" pronoun shift, and without a closing period — user's explicit call.
+
+**Added:** new #682–684, appended straight after #681 (no renumbering of prior quotes).
+
+**Other updates bundled in because they touch quote numbering:**
+- Header quote count (`681` → `684`), footer text, go-to input placeholder/max, `goTo()`/hash-link bounds.
+
+**Files touched:** `index.html` only.
+
+---
+
 ## 2026-07-13 — Added 8 new quotes (#674–681)
 
 **Summary:** User supplied 8 new quotes directly (not sourced from the web scrape) and asked for a spelling/word-usage check before adding. Corrected several typos and word choices, presented the corrected versions for approval, then appended as approved.
