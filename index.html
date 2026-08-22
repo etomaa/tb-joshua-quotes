@@ -110,7 +110,7 @@ html[data-theme="dark"] .tbtn .icon-moon{display:none}
     </div>
   </div>
   <div class="mb">
-    <span><strong id="vc">684</strong> quotes</span>
+    <span><strong id="vc">690</strong> quotes</span>
     <span>&middot;</span>
     <span>TB Joshua &middot; SCOAN</span>
     <button id="themeBtn" class="tbtn" onclick="toggleTheme()" title="Toggle dark mode">
@@ -119,7 +119,7 @@ html[data-theme="dark"] .tbtn .icon-moon{display:none}
     </button>
     <div class="gw">
       <label for="gi">Go to #</label>
-      <input type="number" id="gi" placeholder="1&#8211;684" min="1" max="684">
+      <input type="number" id="gi" placeholder="1&#8211;690" min="1" max="690">
       <button class="gbtn" onclick="goTo()">Go</button>
     </div>
   </div>
@@ -133,7 +133,7 @@ html[data-theme="dark"] .tbtn .icon-moon{display:none}
   </div>
 </main>
 <div id="toast"></div>
-<footer><strong>TB Joshua</strong> &middot; Quotable Quotes &middot; Volumes 1 &amp; 2 &middot; 684 Quotes</footer>
+<footer><strong>TB Joshua</strong> &middot; Quotable Quotes &middot; Volumes 1 &amp; 2 &middot; 690 Quotes</footer>
 <script>
 function initTheme(){const s=localStorage.getItem('theme');const dark=s==='dark'||(!s&&window.matchMedia('(prefers-color-scheme: dark)').matches);if(dark)document.documentElement.setAttribute('data-theme','dark');}
 function toggleTheme(){const isDark=document.documentElement.getAttribute('data-theme')==='dark';document.documentElement.setAttribute('data-theme',isDark?'light':'dark');localStorage.setItem('theme',isDark?'light':'dark');}
@@ -822,7 +822,13 @@ const Q=[
   {id:681,text:"Challenges, temptations and situations are informants that promotion is coming."},
   {id:682,text:"Your enemy loses no time to plot against you; you should lose no time to commit yourself to the Lord in prayer."},
   {id:683,text:"There is power in my mouth, the belief in my heart is released by faith out of my mouth."},
-  {id:684,text:"If you take God's word to heart and truly make it a part of you by meditation, it will by it very nature change you and when it does, you will soon be called to act with God"},
+  {id:684,text:"If we take God's word to heart and truly make it a part of you by meditation, it will by it very nature change you and when it does, you will soon be called to act with God"},
+  {id:685,text:"But knowing God is not only seeing His Works but learning His ways."},
+  {id:686,text:"We will continue to be challenged with issues that violate our conscience."},
+  {id:687,text:"My life will run smoother when I go by the way of the book"},
+  {id:688,text:"Broken things become useful in God's hands"},
+  {id:689,text:"If you have not experienced God, there will be dissatisfaction, a sense of hunger to know what life is all about. A desire to know what happens after life is over"},
+  {id:690,text:"To the degree we reverence God's word in our hearts, to that same degree His Spirit will release His power through us."},
 ];
 function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}
 function hl(t,q){if(!q)return esc(t);const e=esc(t),s=q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');return e.replace(new RegExp('('+s+')','gi'),'<mark>$1</mark>')}
@@ -859,7 +865,7 @@ function toast(m){
 }
 function goTo(){
   const v=parseInt(document.getElementById('gi').value);
-  if(!v||v<1||v>684)return toast('Enter 1–684');
+  if(!v||v<1||v>690)return toast('Enter 1–690');
   const si=document.getElementById('si');
   if(si.value){si.value='';render(Q,'');}
   requestAnimationFrame(()=>{
@@ -882,7 +888,7 @@ function handleHash(){
   const h=location.hash;
   if(h&&h.startsWith('#q')){
     const id=parseInt(h.slice(2));
-    if(id>=1&&id<=684){
+    if(id>=1&&id<=690){
       setTimeout(()=>{
         const el=document.getElementById('q'+id);
         if(el){el.scrollIntoView({behavior:'smooth',block:'center'});el.classList.add('flash');setTimeout(()=>el.classList.remove('flash'),2000);}

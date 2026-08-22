@@ -4,6 +4,29 @@ Living log of substantive changes to `index.html` (quote content, numbering, and
 
 ---
 
+## 2026-07-13 — Added 6 new quotes (#685–690); fixed a data-entry error on #684
+
+**Data-entry fix on #684:** while adding this new batch, discovered that #684 had been entered as "If **you** take God's word..." instead of "If **we** take God's word..." as the user explicitly asked to keep it (see the entry below — "kept as submitted" / "we"/"you" pronoun shift was supposed to be *preserved*, not silently corrected). This was my own transcription error, now fixed to match what the user actually submitted: "If we take God's word to heart and truly make it a part of you by meditation, it will by it very nature change you and when it does, you will soon be called to act with God"
+
+**Summary:** User supplied 6 more quotes directly. Applied only mechanical/unambiguous corrections (typos, stray copy-paste formatting artifacts); did not alter meaning or word choice.
+
+**Corrections made:**
+- #685 — added verbatim, no issues.
+- #686 — stray leading quotation mark (no matching close) stripped.
+- #687 — added verbatim, no issues.
+- #688 — added verbatim, no issues.
+- #689 — "disatisfaction" → "dissatisfaction" (typo); stray trailing quotation mark stripped.
+- #690 — stripped markdown italics asterisks and quote marks (copy-paste artifacts, not part of the quote data model); removed a misplaced comma after "To the degree"; changed "...in our hearts. to that same degree..." to "...in our hearts, to that same degree..." (period → comma) since it's one continuous correlative sentence ("To the degree X, to that same degree Y"), not two.
+
+**Added:** new #685–690, appended straight after #684 (no renumbering of prior quotes).
+
+**Other updates bundled in because they touch quote numbering:**
+- Header quote count (`684` → `690`), footer text, go-to input placeholder/max, `goTo()`/hash-link bounds.
+
+**Files touched:** `index.html` only.
+
+---
+
 ## 2026-07-13 — Added 3 new quotes (#682–684)
 
 **Summary:** User supplied 3 more quotes directly. Flagged a few things during review (missing opening quote mark on #682; unusual clause phrasing in #683; a typo and a pronoun shift in #684) but user chose to keep the wording as submitted rather than apply the suggested fixes.
