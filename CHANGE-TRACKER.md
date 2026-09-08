@@ -4,6 +4,19 @@ Living log of substantive changes to `index.html` (quote content, numbering, and
 
 ---
 
+## 2026-07-13 — Added 3 new quotes (#691–693)
+
+**Summary:** User supplied 3 more quotes directly, on the theme of giving/love. No spelling or grammar issues found — only stripped the wrapping quotation marks (straight and curly) from the pasted text, consistent with every other entry in the data model.
+
+**Added:** new #691–693, appended straight after #690 (no renumbering of prior quotes).
+
+**Other updates bundled in because they touch quote numbering:**
+- Header quote count (`690` → `693`), footer text, go-to input placeholder/max, `goTo()`/hash-link bounds.
+
+**Files touched:** `index.html` only.
+
+---
+
 ## 2026-07-13 — Added 6 new quotes (#685–690); fixed a data-entry error on #684
 
 **Data-entry fix on #684:** while adding this new batch, discovered that #684 had been entered as "If **you** take God's word..." instead of "If **we** take God's word..." as the user explicitly asked to keep it (see the entry below — "kept as submitted" / "we"/"you" pronoun shift was supposed to be *preserved*, not silently corrected). This was my own transcription error, now fixed to match what the user actually submitted: "If we take God's word to heart and truly make it a part of you by meditation, it will by it very nature change you and when it does, you will soon be called to act with God"
