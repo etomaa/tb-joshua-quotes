@@ -110,7 +110,7 @@ html[data-theme="dark"] .tbtn .icon-moon{display:none}
     </div>
   </div>
   <div class="mb">
-    <span><strong id="vc">694</strong> quotes</span>
+    <span><strong id="vc">702</strong> quotes</span>
     <span>&middot;</span>
     <span>TB Joshua &middot; SCOAN</span>
     <button id="themeBtn" class="tbtn" onclick="toggleTheme()" title="Toggle dark mode">
@@ -119,7 +119,7 @@ html[data-theme="dark"] .tbtn .icon-moon{display:none}
     </button>
     <div class="gw">
       <label for="gi">Go to #</label>
-      <input type="number" id="gi" placeholder="1&#8211;694" min="1" max="694">
+      <input type="number" id="gi" placeholder="1&#8211;702" min="1" max="702">
       <button class="gbtn" onclick="goTo()">Go</button>
     </div>
   </div>
@@ -133,7 +133,7 @@ html[data-theme="dark"] .tbtn .icon-moon{display:none}
   </div>
 </main>
 <div id="toast"></div>
-<footer><strong>TB Joshua</strong> &middot; Quotable Quotes &middot; Volumes 1 &amp; 2 &middot; 694 Quotes</footer>
+<footer><strong>TB Joshua</strong> &middot; Quotable Quotes &middot; Volumes 1 &amp; 2 &middot; 702 Quotes</footer>
 <script>
 function initTheme(){const s=localStorage.getItem('theme');const dark=s==='dark'||(!s&&window.matchMedia('(prefers-color-scheme: dark)').matches);if(dark)document.documentElement.setAttribute('data-theme','dark');}
 function toggleTheme(){const isDark=document.documentElement.getAttribute('data-theme')==='dark';document.documentElement.setAttribute('data-theme',isDark?'light':'dark');localStorage.setItem('theme',isDark?'light':'dark');}
@@ -833,6 +833,14 @@ const Q=[
   {id:692,text:"The love you give away is the only love you keep"},
   {id:693,text:"What we give attracts people but the way and manner we give attracts God. We should not waste our time in giving if the way and manner is not of God"},
   {id:694,text:"Forgiveness offers us an opportunity to reshape our destiny"},
+  {id:695,text:"Never allow your situation to dictate the direction of your confession. Moses did not allow the Red Sea to dictate the direction of his faith. His heart was deeply engaged with God, focusing on what God had to say."},
+  {id:696,text:"Our words express our thoughts which are the seeds of our life."},
+  {id:697,text:"Confession is not just saying words, it is not just committing the Word to memory, which is valuable, but it is letting the Word become an integral part of our being. It lives in us."},
+  {id:698,text:"When you speak right you are training yourself to think right. The Word dominating your mouth will dominate your mind."},
+  {id:699,text:"Your mind must be disciplined to become your servant but not your master."},
+  {id:700,text:"When the bed of confession is well laid, persevering faith lies secure on it."},
+  {id:701,text:"When you think right you are training yourself to act right. The Word dominating your mind will influence your conduct and behaviour."},
+  {id:702,text:"Our life will always go to the level of our thoughts."},
 ];
 function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}
 function hl(t,q){if(!q)return esc(t);const e=esc(t),s=q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');return e.replace(new RegExp('('+s+')','gi'),'<mark>$1</mark>')}
@@ -869,7 +877,7 @@ function toast(m){
 }
 function goTo(){
   const v=parseInt(document.getElementById('gi').value);
-  if(!v||v<1||v>694)return toast('Enter 1–694');
+  if(!v||v<1||v>702)return toast('Enter 1–702');
   const si=document.getElementById('si');
   if(si.value){si.value='';render(Q,'');}
   requestAnimationFrame(()=>{
@@ -892,7 +900,7 @@ function handleHash(){
   const h=location.hash;
   if(h&&h.startsWith('#q')){
     const id=parseInt(h.slice(2));
-    if(id>=1&&id<=694){
+    if(id>=1&&id<=702){
       setTimeout(()=>{
         const el=document.getElementById('q'+id);
         if(el){el.scrollIntoView({behavior:'smooth',block:'center'});el.classList.add('flash');setTimeout(()=>el.classList.remove('flash'),2000);}

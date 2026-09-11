@@ -4,6 +4,21 @@ Living log of substantive changes to `index.html` (quote content, numbering, and
 
 ---
 
+## 2026-09-11 — Added 8 new quotes (#695–702), on confession/thoughts/words
+
+**Summary:** User supplied 8 more quotes directly, on the theme of confession, thoughts, and words. Checked all 8 against the existing 694 quotes for duplicates (exact-text search on distinctive phrases) — no matches found.
+
+**Note on #700:** user flagged this as thematically related to existing #179 ("Confession builds the road over which faith carries its mighty cargo.") but a distinct line, not a duplicate — both kept.
+
+**Added:** new #695–702, appended straight after #694 (no renumbering of prior quotes). Added verbatim (only stripped wrapping quotation marks, consistent with the rest of the data model).
+
+**Other updates bundled in because they touch quote numbering:**
+- Header quote count (`694` → `702`), footer text, go-to input placeholder/max, `goTo()`/hash-link bounds.
+
+**Files touched:** `index.html` only.
+
+---
+
 ## 2026-09-08 — Added 1 new quote (#694)
 
 **Summary:** User supplied 1 more quote directly, on the theme of forgiveness. Added verbatim, no issues.
