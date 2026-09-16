@@ -4,6 +4,19 @@ Living log of substantive changes to `index.html` (quote content, numbering, and
 
 ---
 
+## 2026-09-16 — Added 4 new quotes (#703–706), on prayer/the Holy Spirit
+
+**Summary:** User supplied 4 more quotes directly, on the theme of prayer and the Holy Spirit. Checked against the existing 702 quotes for duplicates — no matches found. Added verbatim, no spelling/wording issues.
+
+**Added:** new #703–706, appended straight after #702 (no renumbering of prior quotes).
+
+**Other updates bundled in because they touch quote numbering:**
+- Header quote count (`702` → `706`), footer text, go-to input placeholder/max, `goTo()`/hash-link bounds.
+
+**Files touched:** `index.html` only.
+
+---
+
 ## 2026-09-11 — Added 8 new quotes (#695–702), on confession/thoughts/words
 
 **Summary:** User supplied 8 more quotes directly, on the theme of confession, thoughts, and words. Checked all 8 against the existing 694 quotes for duplicates (exact-text search on distinctive phrases) — no matches found.
