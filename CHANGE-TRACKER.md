@@ -4,6 +4,26 @@ Living log of substantive changes to `index.html` (quote content, numbering, and
 
 ---
 
+## 2026-09-22 — Added 14 new quotes (#707–720), on the Word/confession/faith
+
+**Summary:** User supplied 14 more quotes on the theme of God's Word, confession, and faith. Checked against the existing 706 quotes for duplicates — no matches found.
+
+**Corrections made (flagged to user before adding, confirmed by them):**
+- #709: "responae" → "response" (clear typo).
+- #711: removed a stray double space ("influence God  with" → "influence God with").
+- #713: user supplied corrected wording — "because the Spirit Himself through the mind" (missing verb, as originally submitted) → "because the Spirit expresses Himself through the mind."
+- #714: flagged possible missing "on" ("act faith" vs. "act on faith") — user re-submitted the same wording unchanged, so kept verbatim as "Failure to act faith nullifies our confession."
+- #718: removed a stray double space ("in the lips of  believers" → "in the lips of believers").
+- #719: user supplied corrected wording — "based upon the living rises" (missing noun, as originally submitted) → "based upon the living Word rises."
+- #720: stripped trailing "#TBJoshua" hashtag from the submitted text — the data model never stores attribution in the `text` field (all 720 quotes are already understood to be TB Joshua's).
+
+**Added:** new #707–720, appended straight after #706 (no renumbering of prior quotes).
+
+**Other updates bundled in because they touch quote numbering:**
+- Header quote count (`706` → `720`), footer text, go-to input placeholder/max, `goTo()`/hash-link bounds.
+
+---
+
 ## 2026-09-16 — Added 4 new quotes (#703–706), on prayer/the Holy Spirit
 
 **Summary:** User supplied 4 more quotes directly, on the theme of prayer and the Holy Spirit. Checked against the existing 702 quotes for duplicates — no matches found. Added verbatim, no spelling/wording issues.

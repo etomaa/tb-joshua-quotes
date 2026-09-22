@@ -110,7 +110,7 @@ html[data-theme="dark"] .tbtn .icon-moon{display:none}
     </div>
   </div>
   <div class="mb">
-    <span><strong id="vc">706</strong> quotes</span>
+    <span><strong id="vc">720</strong> quotes</span>
     <span>&middot;</span>
     <span>TB Joshua &middot; SCOAN</span>
     <button id="themeBtn" class="tbtn" onclick="toggleTheme()" title="Toggle dark mode">
@@ -119,7 +119,7 @@ html[data-theme="dark"] .tbtn .icon-moon{display:none}
     </button>
     <div class="gw">
       <label for="gi">Go to #</label>
-      <input type="number" id="gi" placeholder="1&#8211;706" min="1" max="706">
+      <input type="number" id="gi" placeholder="1&#8211;720" min="1" max="720">
       <button class="gbtn" onclick="goTo()">Go</button>
     </div>
   </div>
@@ -133,7 +133,7 @@ html[data-theme="dark"] .tbtn .icon-moon{display:none}
   </div>
 </main>
 <div id="toast"></div>
-<footer><strong>TB Joshua</strong> &middot; Quotable Quotes &middot; Volumes 1 &amp; 2 &middot; 706 Quotes</footer>
+<footer><strong>TB Joshua</strong> &middot; Quotable Quotes &middot; Volumes 1 &amp; 2 &middot; 720 Quotes</footer>
 <script>
 function initTheme(){const s=localStorage.getItem('theme');const dark=s==='dark'||(!s&&window.matchMedia('(prefers-color-scheme: dark)').matches);if(dark)document.documentElement.setAttribute('data-theme','dark');}
 function toggleTheme(){const isDark=document.documentElement.getAttribute('data-theme')==='dark';document.documentElement.setAttribute('data-theme',isDark?'light':'dark');localStorage.setItem('theme',isDark?'light':'dark');}
@@ -845,6 +845,20 @@ const Q=[
   {id:704,text:"Scriptural prayer releases God's power to heal, deliver, bless and save."},
   {id:705,text:"Meditate until you receive clear light to pray."},
   {id:706,text:"The Holy Spirit does not come to perfect people; He comes to people who are sincerely available."},
+  {id:707,text:"The Word begins to grow in our mind and gains supremacy over the thinking processes when we come to the point of conviction"},
+  {id:708,text:"It's God's Word coming forth out of your lips that produces an overcoming spirit within you"},
+  {id:709,text:"It is the heart that speaks to us what God is saying. Our spirit responds to God's Word. The response of this heart is what we refer to as conscience"},
+  {id:710,text:"Without an active cooperation of the mind, the spirit of persevering faith has no means to express Himself"},
+  {id:711,text:"You cannot influence God with your eloquence and powerful prayer points because God has His own will and way."},
+  {id:712,text:"Vain and idle words may entertain men but do not reach God"},
+  {id:713,text:"Our mind must be taught to concentrate upon the things in the Spirit because the Spirit expresses Himself through the mind"},
+  {id:714,text:"Failure to act faith nullifies our confession. To God's power nothing is impossible but you have a role to play"},
+  {id:715,text:"Nothing of God is possible unless you act on the Word, for a seed is powerless unless it is planted"},
+  {id:716,text:"When the Word is settled in the heart, it becomes an instrument for the Holy Spirit to use"},
+  {id:717,text:"A man who walks by faith requires no evidence of the senses. He does not speak to be heard by men but by God"},
+  {id:718,text:"The Word becomes a living thing in the lips of believers"},
+  {id:719,text:"The confession based upon the living Word rises above the senses; it gives us possession"},
+  {id:720,text:"Faith comes when the Word prevails over the thinking processes."},
 ];
 function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}
 function hl(t,q){if(!q)return esc(t);const e=esc(t),s=q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');return e.replace(new RegExp('('+s+')','gi'),'<mark>$1</mark>')}
@@ -881,7 +895,7 @@ function toast(m){
 }
 function goTo(){
   const v=parseInt(document.getElementById('gi').value);
-  if(!v||v<1||v>706)return toast('Enter 1–706');
+  if(!v||v<1||v>720)return toast('Enter 1–720');
   const si=document.getElementById('si');
   if(si.value){si.value='';render(Q,'');}
   requestAnimationFrame(()=>{
@@ -904,7 +918,7 @@ function handleHash(){
   const h=location.hash;
   if(h&&h.startsWith('#q')){
     const id=parseInt(h.slice(2));
-    if(id>=1&&id<=706){
+    if(id>=1&&id<=720){
       setTimeout(()=>{
         const el=document.getElementById('q'+id);
         if(el){el.scrollIntoView({behavior:'smooth',block:'center'});el.classList.add('flash');setTimeout(()=>el.classList.remove('flash'),2000);}
