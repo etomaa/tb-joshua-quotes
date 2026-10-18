@@ -110,7 +110,7 @@ html[data-theme="dark"] .tbtn .icon-moon{display:none}
     </div>
   </div>
   <div class="mb">
-    <span><strong id="vc">720</strong> quotes</span>
+    <span><strong id="vc">725</strong> quotes</span>
     <span>&middot;</span>
     <span>TB Joshua &middot; SCOAN</span>
     <button id="themeBtn" class="tbtn" onclick="toggleTheme()" title="Toggle dark mode">
@@ -119,7 +119,7 @@ html[data-theme="dark"] .tbtn .icon-moon{display:none}
     </button>
     <div class="gw">
       <label for="gi">Go to #</label>
-      <input type="number" id="gi" placeholder="1&#8211;720" min="1" max="720">
+      <input type="number" id="gi" placeholder="1&#8211;725" min="1" max="725">
       <button class="gbtn" onclick="goTo()">Go</button>
     </div>
   </div>
@@ -133,7 +133,7 @@ html[data-theme="dark"] .tbtn .icon-moon{display:none}
   </div>
 </main>
 <div id="toast"></div>
-<footer><strong>TB Joshua</strong> &middot; Quotable Quotes &middot; Volumes 1 &amp; 2 &middot; 720 Quotes</footer>
+<footer><strong>TB Joshua</strong> &middot; Quotable Quotes &middot; Volumes 1 &amp; 2 &middot; 725 Quotes</footer>
 <script>
 function initTheme(){const s=localStorage.getItem('theme');const dark=s==='dark'||(!s&&window.matchMedia('(prefers-color-scheme: dark)').matches);if(dark)document.documentElement.setAttribute('data-theme','dark');}
 function toggleTheme(){const isDark=document.documentElement.getAttribute('data-theme')==='dark';document.documentElement.setAttribute('data-theme',isDark?'light':'dark');localStorage.setItem('theme',isDark?'light':'dark');}
@@ -859,6 +859,11 @@ const Q=[
   {id:718,text:"The Word becomes a living thing in the lips of believers"},
   {id:719,text:"The confession based upon the living Word rises above the senses; it gives us possession"},
   {id:720,text:"Faith comes when the Word prevails over the thinking processes."},
+  {id:721,text:"Being born again means having the privilege of letting the Creator assist you in all you do"},
+  {id:722,text:"Knowing how to believe that God hears us when we pray is a much greater blessing - because a prayer of faith can be repeated ten thousand times!"},
+  {id:723,text:"What we do for Christ is only a reflection of the relationship we have with God"},
+  {id:724,text:"One word may speak to you today and another tomorrow, but God sends each of them straight into your life"},
+  {id:725,text:"Where there is no heat of trials, temptation and challenges, sin easily hides."},
 ];
 function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}
 function hl(t,q){if(!q)return esc(t);const e=esc(t),s=q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');return e.replace(new RegExp('('+s+')','gi'),'<mark>$1</mark>')}
@@ -895,7 +900,7 @@ function toast(m){
 }
 function goTo(){
   const v=parseInt(document.getElementById('gi').value);
-  if(!v||v<1||v>720)return toast('Enter 1–720');
+  if(!v||v<1||v>725)return toast('Enter 1–725');
   const si=document.getElementById('si');
   if(si.value){si.value='';render(Q,'');}
   requestAnimationFrame(()=>{
@@ -918,7 +923,7 @@ function handleHash(){
   const h=location.hash;
   if(h&&h.startsWith('#q')){
     const id=parseInt(h.slice(2));
-    if(id>=1&&id<=720){
+    if(id>=1&&id<=725){
       setTimeout(()=>{
         const el=document.getElementById('q'+id);
         if(el){el.scrollIntoView({behavior:'smooth',block:'center'});el.classList.add('flash');setTimeout(()=>el.classList.remove('flash'),2000);}

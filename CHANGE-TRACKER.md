@@ -4,6 +4,20 @@ Living log of substantive changes to `index.html` (quote content, numbering, and
 
 ---
 
+## 2026-10-18 — Added 5 new quotes (#721–725), on being born again/prayer/service/the Word/trials
+
+**Summary:** User supplied 5 more quotes. Checked against the existing 720 quotes for duplicates — no matches found.
+
+**Edits made:**
+- #725: replaced trailing comma with a period; stripped the "Prophet T.B. Joshua" attribution (the data model never stores attribution in `text`).
+- #722: stripped the "Prophet TB Joshua" attribution; wording kept verbatim.
+
+**Added:** new #721–725, appended straight after #720 (no renumbering).
+
+**Other updates bundled in because they touch quote numbering:** header quote count, footer text, go-to input placeholder/max, `goTo()`/hash-link bounds (`720` → `725`).
+
+---
+
 ## 2026-09-22 — Added 14 new quotes (#707–720), on the Word/confession/faith
 
 **Summary:** User supplied 14 more quotes on the theme of God's Word, confession, and faith. Checked against the existing 706 quotes for duplicates — no matches found.
