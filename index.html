@@ -110,7 +110,7 @@ html[data-theme="dark"] .tbtn .icon-moon{display:none}
     </div>
   </div>
   <div class="mb">
-    <span><strong id="vc">725</strong> quotes</span>
+    <span><strong id="vc">747</strong> quotes</span>
     <span>&middot;</span>
     <span>TB Joshua &middot; SCOAN</span>
     <button id="themeBtn" class="tbtn" onclick="toggleTheme()" title="Toggle dark mode">
@@ -119,7 +119,7 @@ html[data-theme="dark"] .tbtn .icon-moon{display:none}
     </button>
     <div class="gw">
       <label for="gi">Go to #</label>
-      <input type="number" id="gi" placeholder="1&#8211;725" min="1" max="725">
+      <input type="number" id="gi" placeholder="1&#8211;747" min="1" max="747">
       <button class="gbtn" onclick="goTo()">Go</button>
     </div>
   </div>
@@ -133,7 +133,7 @@ html[data-theme="dark"] .tbtn .icon-moon{display:none}
   </div>
 </main>
 <div id="toast"></div>
-<footer><strong>TB Joshua</strong> &middot; Quotable Quotes &middot; Volumes 1 &amp; 2 &middot; 725 Quotes</footer>
+<footer><strong>TB Joshua</strong> &middot; Quotable Quotes &middot; Volumes 1 &amp; 2 &middot; 747 Quotes</footer>
 <script>
 function initTheme(){const s=localStorage.getItem('theme');const dark=s==='dark'||(!s&&window.matchMedia('(prefers-color-scheme: dark)').matches);if(dark)document.documentElement.setAttribute('data-theme','dark');}
 function toggleTheme(){const isDark=document.documentElement.getAttribute('data-theme')==='dark';document.documentElement.setAttribute('data-theme',isDark?'light':'dark');localStorage.setItem('theme',isDark?'light':'dark');}
@@ -864,6 +864,28 @@ const Q=[
   {id:723,text:"What we do for Christ is only a reflection of the relationship we have with God"},
   {id:724,text:"One word may speak to you today and another tomorrow, but God sends each of them straight into your life"},
   {id:725,text:"Where there is no heat of trials, temptation and challenges, sin easily hides."},
+  {id:726,text:"The evidence of Jesus Christ is lives changed."},
+  {id:727,text:"In the heart of man, there is a constant conflict between the flesh and the spirit."},
+  {id:728,text:"Do not think that your crying and complaints can force Jesus to become sentimental and then give Himself out so cheaply."},
+  {id:729,text:"It is not possible to heal people and collect money. That gift is not for sale. When it is time to heal, it is time to give what God has given us."},
+  {id:730,text:"As for me and my house, I have no other refuge than this command of Jesus, 'Only believe' that is my refuge."},
+  {id:731,text:"Genuine faith can find encouragement, even in that which is discouraging, and get nearer to God."},
+  {id:732,text:"As Christians, though there may be reasons to be troubled, there are greater reasons not to be."},
+  {id:733,text:"A new year is a gift from God, a part of the Divine nature of God."},
+  {id:734,text:"I agree with God's Word; I disagree with any condition, situation or circumstance contrary to that Word."},
+  {id:735,text:"If you are worshipping God without depending on the Spirit of God, you are serving a god you do not know."},
+  {id:736,text:"If you have truly been born again, it was the Holy Spirit who convicted you of sin and drew you into a relationship with Jesus."},
+  {id:737,text:"A beggar always remains a beggar. Africa, stop begging — you have what it takes to solve your problem."},
+  {id:738,text:"Don't envy those who make their wealth in an ungodly way. The wicked seem to prosper now and live without a care, but they will spend eternity in terror and despair."},
+  {id:739,text:"The multitude of people fail because they talk failure."},
+  {id:740,text:"You have the right to claim blessing, healing, protection, freedom, deliverance, because He was unjustly nailed to a cross so you could have a life that is fulfilling."},
+  {id:741,text:"What is possible for you in Christ Jesus depends on your capacity to believe."},
+  {id:742,text:"If we spoke less and sang songs of faith more, the world would be more Heavenly."},
+  {id:743,text:"I believe the prayers of 30 years ago are not lost. We may not see the results of our labour or sacrifice immediately, but in due time they will produce much fruit."},
+  {id:744,text:"When God has not taken away our trouble or temptation yet, with His grace in our lives, we are content."},
+  {id:745,text:"Your situation does not embarrass God because He has solution."},
+  {id:746,text:"Weeping must not hinder worship."},
+  {id:747,text:"Jesus Christ had a sense of destiny."},
 ];
 function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}
 function hl(t,q){if(!q)return esc(t);const e=esc(t),s=q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');return e.replace(new RegExp('('+s+')','gi'),'<mark>$1</mark>')}
@@ -900,7 +922,7 @@ function toast(m){
 }
 function goTo(){
   const v=parseInt(document.getElementById('gi').value);
-  if(!v||v<1||v>725)return toast('Enter 1–725');
+  if(!v||v<1||v>747)return toast('Enter 1–747');
   const si=document.getElementById('si');
   if(si.value){si.value='';render(Q,'');}
   requestAnimationFrame(()=>{
@@ -923,7 +945,7 @@ function handleHash(){
   const h=location.hash;
   if(h&&h.startsWith('#q')){
     const id=parseInt(h.slice(2));
-    if(id>=1&&id<=725){
+    if(id>=1&&id<=747){
       setTimeout(()=>{
         const el=document.getElementById('q'+id);
         if(el){el.scrollIntoView({behavior:'smooth',block:'center'});el.classList.add('flash');setTimeout(()=>el.classList.remove('flash'),2000);}

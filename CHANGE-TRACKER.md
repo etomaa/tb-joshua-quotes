@@ -4,6 +4,21 @@ Living log of substantive changes to `index.html` (quote content, numbering, and
 
 ---
 
+## 2026-10-28 — Added 22 new quotes (#726–747), sourced from QuoteFancy
+
+**Summary:** Compared quotefancy.com/t-b-joshua-quotes (153 quotes) against the site's 725. 104 matched exactly, 10 were wording variants of existing quotes (not added). Added the 22 non-duplicate quotes the user approved.
+
+**Excluded:**
+- 8 live-broadcast prayers/declarations (per user).
+- 5 more removed by user: "If you don't have a vision...", "Ask God for the grace to live for Him...", and 3 held quotes (controversy response, two truncated/garbled).
+- 4 partial/variant matches of existing quotes (#36, #562, #566, #698).
+
+**Edits:** curly quotes/apostrophes straightened and en dashes changed to em dashes to match existing style. #738: added comma before "but" (grammar check; "SEEM" lowercased to "seem"). #745 ("because He has solution") left as sourced, possibly missing "a".
+
+**Added:** #726–747 after #725. Header count, footer, go-to input, `goTo()`/hash bounds updated (`725` → `747`).
+
+---
+
 ## 2026-10-18 — Added 5 new quotes (#721–725), on being born again/prayer/service/the Word/trials
 
 **Summary:** User supplied 5 more quotes. Checked against the existing 720 quotes for duplicates — no matches found.
